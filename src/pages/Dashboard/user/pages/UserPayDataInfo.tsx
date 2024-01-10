@@ -1,15 +1,15 @@
-import { useState } from "react"
+// import { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { addressData } from "../../../../utils/data"
-import {CopyToClipboard} from "react-copy-to-clipboard"
-import { FaRegClipboard } from "react-icons/fa"
+// import {CopyToClipboard} from "react-copy-to-clipboard"
+// import { FaRegClipboard } from "react-icons/fa"
 
 const UserPayDataInfo = () => {
     const navigate = useNavigate()
   const {wallet} = useParams()
   const {amount} = useParams()
 
-  const [copied, setCopied] = useState(false)
+  // const [copied, setCopied] = useState(false)
 
   const selectedAddress = addressData.find((item : any) => item.name === wallet)
   return (
@@ -36,10 +36,10 @@ const UserPayDataInfo = () => {
         <p>Send ${amount} to the address below</p>
         <div className="d-flex w-75">
           <input type="text" name="" value={selectedAddress?.address} id="" className="w-100 rounded"/>
-          <CopyToClipboard text={selectedAddress?.address} onCopy={() => setCopied(true)}>
+          {/* <CopyToClipboard text={selectedAddress?.address} onCopy={() => setCopied(true)}>
             <FaRegClipboard size={30} cursor="pointer" />
-          </CopyToClipboard>
-          {copied ? (<span style={{color: 'green'}}>Copied</span>): null }
+          </CopyToClipboard> */}
+          {/* {copied ? (<span style={{color: 'green'}}>Copied</span>): null } */}
         </div>
         <p>Network Type: {selectedAddress?.unit}</p>
         {/* <Link to='proof'> */}
