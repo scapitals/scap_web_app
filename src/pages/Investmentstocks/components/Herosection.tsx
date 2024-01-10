@@ -15,9 +15,9 @@ const Herosection = () => {
         </div>
     </div>
     <div>
-       <div className="container">
-        <p>WHAT ARE STOCKS?</p>
-                <hr  className="w-32 "/>
+       <div className="container py-6">
+        <p className="text-lg md:text-3xl ">WHAT ARE STOCKS?</p>
+                <hr  className="w-32 md:w-64 h-1 dark:bg-[#f1f1f1] bg-[#1f2937]"/>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12">
             <div>
                 <p>A stock represents a share in the ownership of a company, including a claim on the company's earnings and assets. As such, stockholders are partial owners of the company. When the value of the business rises or falls, so does the value of the stock. Stocks are generally bought and sold electronically through stock exchanges, the two primary ones in the United States being the New York Stock Exchange (NYSE) and the National Association of Securities Dealers (NASDAQ). While some companies sell</p>
@@ -31,7 +31,7 @@ const Herosection = () => {
     <div className="container">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12">
         <div>
-        <h2>HOW STOCKS FIT WITHIN AN OVERALL INVESTMENT PORTFOLIO.</h2>
+        <h2 className="text-lg md:text-3xl">HOW STOCKS FIT WITHIN AN OVERALL INVESTMENT PORTFOLIO.</h2>
         <p>Stocks are an important part of any portfolio because of their potential for growth and higher returns versus other investment products. In order to determine how much you should allocate to stocks, you should first develop a comprehensive financial plan that reflects your investment horizon and the level of risk you're willing to accept in exchange for the potential upside stocks can offer.</p>
         <p>Asset classes perform differently, and it's nearly impossible to predict which asset class will perform best in a given year. If you had invested $100,000 in just U.S. Stocks in 1997, it would have almost quadrupled to $400,000 by 2017, but there would have been many ups and downs due to volatility. A more diversified investment portfolio would have had a lower return, but reduced volatility.</p>
         </div>
@@ -41,7 +41,7 @@ const Herosection = () => {
     </div>
     </div>
     <div className="container">
-        <h2>WHY INVEST IN STOCKS WITH SOLIDVESTGLOBAL.COM?</h2>
+        <h2 className="text-lg md:text-3xl">WHY INVEST IN STOCKS WITH SOLIDVESTGLOBAL.COM?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {solidProItems.map(item => (
                 <SolidItemCard key={item.id} img={item.img} title={item.title} text={item.text}/>
@@ -49,7 +49,7 @@ const Herosection = () => {
         </div>
         <div>
             <div className="w-1/2 py-12">
-                <h3>WHY TRADE STOCKS?</h3>
+                <h3 className="text-lg md:text-3xl">WHY TRADE STOCKS?</h3>
                 <p>Stocks let you own a piece of a company’s future. They’re available for a wide variety of industries—so you can tap into your knowledge of specific businesses, or help you to diversify your portfolio.</p>
             </div>
         </div>
@@ -63,7 +63,7 @@ const Herosection = () => {
                 <img src={AbtHero} alt="image" className="w-full rounded-xl" />
             </div>
             <div>
-                <h2>Fast Facts</h2>
+                <h2 className="text-lg md:text-3xl">Fast Facts</h2>
                 <ul>
                     {factItems.map((item, index) => (
                         <li key={index}>{item}</li>

@@ -16,7 +16,7 @@ const HeroSection = () => {
                 innovation to help our clients navigate the uncertainty of capital markets</p>
                 <div>
                     <Link to="/login">
-                        <Button btntext="Get Started" /> 
+                        <Button btntext="Get Started" btnlink="login" /> 
                     </Link>
                 </div>
             </div>

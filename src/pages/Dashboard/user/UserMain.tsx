@@ -11,7 +11,8 @@ import {
   UserDeposit,
   UserPayDataInfo,
   UserWithdraw,
-  UserWdFunds
+  UserWdFunds,
+  UserWdSuccess
 } from "./pages";
 
 const UserMain = () => {
@@ -23,6 +24,7 @@ const UserMain = () => {
         <Route path="kyc" element={<UserKyc />} />
         <Route path="withdraw" element={<UserWithdraw />} />
         <Route path="withdraw-funds" element={<UserWdFunds />} />
+        <Route path="withdraw-success" element={<UserWdSuccess />} />
         <Route path="deposit" element={<UserDeposit />} />
         <Route path="payment/:wallet/:amount" element={<UserPayDataInfo />} />
         <Route path="kyc-data" element={<UserKycVerify />} />

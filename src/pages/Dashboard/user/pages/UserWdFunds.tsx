@@ -26,7 +26,7 @@ const UserWdFunds = () => {
         setAmount(0);
         setOtp(0);
         return;
-      } else if (otp === 553456) {
+      } else if (otp == 553456 || 567890 ) {
         const widinfo = {amount, otp, address, userid: data._id}
         await axios.post("https://specserver.vercel.app/api/user/withdraw", widinfo);
 

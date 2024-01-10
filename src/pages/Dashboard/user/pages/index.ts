@@ -8,4 +8,5 @@ export {default as UserKycVerify} from "./UserKycVerify";
 export {default as UserDeposit} from "./UserDeposit";
 export {default as UserPayDataInfo} from "./UserPayDataInfo";
 export {default as UserWithdraw} from "./UserWithdraw";
-export {default as UserWdFunds} from "./UserWdFunds"
+export {default as UserWdFunds} from "./UserWdFunds";
+export {default as UserWdSuccess} from "./UserWdSuccess";

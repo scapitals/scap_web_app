@@ -64,7 +64,7 @@ const UserKycVData = () => {
       <div>
         <h2 className="text-center py-4 text-3xl">TIER TWO VERIFICATION</h2>
         <div className="flex flex-col gap-6">
-          <div style={{ maxWidth: "500px", margin: "0px auto" }}>
+          <div style={{ maxWidth: "500px", margin: "0px auto" }} >
             <h3 className="text-center">Tier two Verification (KYC)</h3>
             <p className="text-center">
               Please kindly upload a government approved identification
@@ -76,7 +76,7 @@ const UserKycVData = () => {
             </p>
           </div>
             <div className="flex flex-col gap-8 justify-center items-center">
-              <div className="border border-primary p-8 rounded-2xl" onClick={uploadRef}>
+              <div className="border border-primary p-8 rounded-2xl bg-[#f1f1f1] dark:bg-[#1f2937]" onClick={uploadRef}>
                 <input
                   type="file"
                   name=""

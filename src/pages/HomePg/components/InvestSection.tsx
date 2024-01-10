@@ -14,18 +14,18 @@ const InvestSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center">
           <div>
-            <p>
+            <p className="text-xl">
               Spectrum Capitals offers a variety of trading accounts to match
               every trading style across all levels of experience. <br />
               Whether you’re a scalper or day trader, use EAs or are a
               discretionary trader - we have you covered.
             </p>
           </div>
-          <InvestCard />
-          <InvestCard />
-          <InvestCard />
-          <InvestCard />
-          <InvestCard />
+          <InvestCard name="BRONZE" minDeposit={500} maxDeposit={2499} roi={40} time={7} />
+          <InvestCard name="SILVER" minDeposit={2500} maxDeposit={4999} roi={55} time={14}/>
+          <InvestCard name="GOLD" minDeposit={5000} maxDeposit={9999} roi={70} time={14}/>
+          <InvestCard name="DIAMOND" minDeposit={10000} maxDeposit={19999} roi={80} time={14}/>
+          <InvestCard name="PLATINUM" minDeposit={20000} maxDeposit={50000} roi={95} time={20}/>
         </div>
       </div>
       <div className="container">

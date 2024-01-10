@@ -29,9 +29,9 @@ function Root() {
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     if (currentTheme === "dark") {
-      return <FaSun />;
+      return <FaSun color="black" size={18}/>;
     } else {
-      return <FaMoon />;
+      return <FaMoon color="white" size={18}/>;
     }
   };
 useEffect(() =>{
@@ -45,7 +45,7 @@ useEffect(() =>{
   return (
     
     <div>
-    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="fixed top-1/2 right-20 cursor-pointer border border-primary rounded-full p-2">
+    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="fixed top-1/2 right-20 cursor-pointer border border-primary rounded-full p-2 z-50 dark:bg-[#f1f1f1] bg-[#1f2937] shadow-2xl">
       {themeBox()}
     </div>
       <Routes>

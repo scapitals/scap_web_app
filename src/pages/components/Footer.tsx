@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <>
-     <div className="bg-subfooter bg-cover bg-center h-[500px] w-full"></div>
+     {/* <div className="bg-subfooter bg-cover bg-center h-[500px] w-full"></div> */}
     <div className="bg-footer py-6">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6 text-white justify-start">

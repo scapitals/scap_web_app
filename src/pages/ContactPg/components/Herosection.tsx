@@ -18,14 +18,14 @@ const Herosection = () => {
       <div className="container py-12 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 py-10">
           <div className="flex flex-col justify-center items-center gap-2">
-            <div className="p-4 border border-primary rounded w-fit">
+            <div className="p-4 border border-primary rounded w-fit bg-[#f1f1f1] dark:bg-[#1f2937]">
               <SlEarphonesAlt size={30}/>
             </div>
             <p>+1 (916) 857-3164</p>
             <p>Mon - Sat: 8:00 - 21:00 (GMT-8)</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
-            <div className="p-4 border border-primary rounded w-fit">
+            <div className="p-4 border border-primary rounded w-fit bg-[#f1f1f1] dark:bg-[#1f2937]">
               <FaEnvelope size={30}/>
             </div>
             
@@ -33,7 +33,7 @@ const Herosection = () => {
             <p>24/7 Customer Support</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
-            <div className="p-4 border border-primary rounded w-fit">
+            <div className="p-4 border border-primary rounded w-fit bg-[#f1f1f1] dark:bg-[#1f2937]">
               <FaLocationDot size={30}/>
             </div>
             <p className="text-center">Aberdeen Avenue, California, Santa Rosa, US</p>
@@ -44,7 +44,7 @@ const Herosection = () => {
           <div className="h-[100%]">
             <img src={AbtAsset} alt="" className="h-[100%]" />
           </div>
-          <form action="" className="w-full px-10 shadow-2xl rounded-2xl p-12">
+          <form action="" className="w-full px-10 shadow-2xl rounded-2xl p-12 bg-[#f1f1f1] dark:bg-[#1f2937]">
             <div className="flex flex-row gap-3 w-full justify-between align-middle">
               <div className="flex flex-col gap-3">
                 <label htmlFor="">Your Full Name</label>
