@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import "slick-carousel/slick/slick.css"
-import UserHome from "./pages/Dashboard/user/UserMain";
 import UserMain from "./pages/Dashboard/user/UserMain";
 
 

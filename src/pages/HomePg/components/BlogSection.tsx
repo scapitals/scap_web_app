@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react'
-import { BlogCard } from '../../ui'
-import axios from 'axios'
+// import { useState } from 'react'
+// import { BlogCard } from '../../ui'
+// import axios from 'axios/'
 // import { BlogApi } from '../../../utils/ApiFeatures'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const BlogSection = () => {
-    const [blogData, setBlogData] = useState([])
+    // const [blogData, setBlogData] = useState([])
 
     // useEffect(() => {
     //     const fetchBlogData = async() => {
@@ -45,12 +45,12 @@ const BlogSection = () => {
                     </div>
                 </div>
                 <div className=' overflow-y-auto max-h-[600px]'>
-                    {blogData.map((item, index)=> (
+                    {/* {blogData.map((item, index)=> (
                         <Link to={item}>
                         <BlogCard key={index}/>    
                         </Link>
                         
-                    ))}
+                    ))} */}
                     
                 </div>
             </div>
@@ -59,4 +59,4 @@ const BlogSection = () => {
   )
 }
 
-export default BlogSection
+export default BlogSection;

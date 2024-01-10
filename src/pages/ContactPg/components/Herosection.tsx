@@ -1,8 +1,6 @@
 import { Navbar } from "../../components";
-import { useState } from "react";
-import { FaEnvelope, FaLocationDot, FaPhone, FaTelegram } from "react-icons/fa6";
+import { FaEnvelope, FaLocationDot } from "react-icons/fa6";
 import {SlEarphonesAlt} from "react-icons/sl"
-import { Link } from "react-router-dom";
 import AbtAsset from "../../../assets/about-hero.jpg";
 
 const Herosection = () => {

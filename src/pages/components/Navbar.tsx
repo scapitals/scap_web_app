@@ -26,9 +26,9 @@ const Navbar = () => {
                 </li>
             </ul>
             <div>
-                <Link to="/login">
-                 <Button btntext="Login"/>   
-                </Link>
+                {/* <Link to="/login"> */}
+                 <Button btntext="Login" btnlink="login"/>   
+                {/* </Link> */}
                 
             </div>
         </div>

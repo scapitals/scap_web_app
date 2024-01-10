@@ -1,5 +1,5 @@
 import {FaArrowLeftLong} from "react-icons/fa6"
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 import {toast} from 'react-toastify'
@@ -68,9 +68,12 @@ const LoginPg = () => {
                         <label htmlFor="">Email Address</label>
                         <input type="email" className="p-2 w-full rounded-lg border border-primary" onChange={(e: any) => setEmail(e.target.value)}/>
                     </div>
-                    <div className="flex flex-col py-4">
+                    <div className="flex flex-col py-4 relative">
                         <label htmlFor="">Password</label>
-                        <input type="password" className="p-2 w-full rounded-lg border border-primary" value={password} onChange={(e: any) => setPassword(e.target.value)}/>
+                        <input type={visible ? "text" : "password"} className="p-2 w-full rounded-lg border border-primary" value={password} onChange={(e: any) => setPassword(e.target.value)}/>
+                        <div className="absolute top-12 right-5 cursor-pointer">
+                          {visible ? <AiOutlineEye size={25} color="green" onClick={() => setVisible(false)} /> : <AiOutlineEyeInvisible  color="green" size={25} onClick={() => setVisible(true)}/>}
+                        </div>
                     </div>
                     <div>
 

@@ -8,7 +8,7 @@ const UserDeposit = () => {
 
   const [amount, setAmount] = useState(0);
   const [select, setSelect] = useState("");
-  const [display, setDisplay] = useState(false);
+  // const [display, setDisplay] = useState(false);
 
   const SelectChange = (e : any) => {
     setSelect(e.target.value);

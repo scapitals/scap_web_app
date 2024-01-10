@@ -1,10 +1,8 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import {
     FaTh,
-    FaBars,
     FaUserAlt,
-    FaRegChartBar,
     FaCommentAlt,
     FaShoppingBag,
     FaThList
@@ -31,6 +29,15 @@ const Sidebar = ({children}: any) => {
       toast.error(err.code, { position: "bottom-left" });
     }
   }
+
+  useEffect(() => {
+    let cookietoken = Cookies.get("token");
+
+    if(!cookietoken){
+      navigate("/login")
+    }
+
+  }, [])
 
     const menuItem=[
         {
