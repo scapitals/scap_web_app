@@ -29,11 +29,7 @@ const Sidebar = ({children}: any) => {
             name:"Refferals",
             icon:<FaRegChartBar/>
         },
-        {
-            path:"/user/settings",
-            name:"Settings",
-            icon:<FaCommentAlt/>
-        },
+        
         {
             path:"/user/kyc",
             name:"KYC Verification",
@@ -43,6 +39,11 @@ const Sidebar = ({children}: any) => {
             path:"/user/support",
             name:"Support",
             icon:<FaThList/>
+        },
+        {
+            path:"/user/settings",
+            name:"Settings",
+            icon:<FaCommentAlt/>
         }
     ]
     return (
@@ -65,9 +66,13 @@ const Sidebar = ({children}: any) => {
                        </NavLink>
                    ))
                }
+               <div>
+                <p>Logout</p>
+                
+               </div>
            </div>
            <main className='pl-56 w-full'>{children}</main>
         </div>
     );
 };
-export default Sidebar
+export default Sidebar;

@@ -1,10 +1,12 @@
 import { Footer } from "../components";
 import {AsMangeSection, BlogSection, HeroSection, InvestSection, SectorHmSection} from "./components";
+import TestHero from "./components/TestHero";
 
 const HomePg = () => {
   return (
-    <div>
-      <HeroSection />
+    <div >
+      {/* <HeroSection /> */}
+      <TestHero />
       <AsMangeSection />
       <InvestSection />
       <SectorHmSection />

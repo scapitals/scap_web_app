@@ -2,7 +2,7 @@ import {dedabt} from "../../assets"
 
 const BlogCard = () => {
   return (
-    <div className="w-full flex flex-row border-b-2 border-primary">
+    <div className="w-full flex flex-row border-b-2 border-primary bg-[#f1f1f1] dark:bg-[#1f2937]">
         <div className="w-1/2 py-6 ">
             <img src={dedabt} alt="" className="rounded-full" />
             <p>Title: Seeking Stability in Dogecoin’s Fluctuations: Could Rebel Satoshi and Chainlink Offer a Safe Haven?</p>

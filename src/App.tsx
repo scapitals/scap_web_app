@@ -3,10 +3,11 @@ import {ToastContainer} from "react-toastify"
 import {HomePg, AboutPg, ContactPg, LoginPg, RegisterPg, FgtPwd, PlanServicePg, InvestmentstockPg} from "./pages";
 import {FaSun, FaMoon} from "react-icons/fa"
 import { useTheme } from "next-themes";
-import "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import AOS from "aos";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import 'aos/dist/aos.css';
+import "slick-carousel/slick/slick.css"
 import UserHome from "./pages/Dashboard/user/UserMain";
 import UserMain from "./pages/Dashboard/user/UserMain";
 
@@ -43,7 +44,7 @@ useEffect(() =>{
   })
   return (
     
-    <>
+    <div>
     <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="fixed top-1/2 right-20 cursor-pointer border border-primary rounded-full p-2">
       {themeBox()}
     </div>
@@ -52,7 +53,6 @@ useEffect(() =>{
         <Route path="/about" element={<AboutPg />} />
         <Route path="/service" element={<PlanServicePg />} />
         <Route path="/investment-stocks" element={<InvestmentstockPg />} />
-        <Route path="/dash" element={<Dashboard />} />
         <Route path="/user/*" element={<UserMain />} />
         <Route path="/login" element={<LoginPg />} />
         <Route path="/contact" element={<ContactPg />} />
@@ -60,7 +60,7 @@ useEffect(() =>{
         <Route path="/forgot-password" element={<FgtPwd />} />
       </Routes>
       <ToastContainer />
-    </>
+    </div>
   )
 }
 

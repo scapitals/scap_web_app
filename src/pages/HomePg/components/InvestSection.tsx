@@ -1,3 +1,4 @@
+import { PserveData } from "../../../utils/data";
 import { InvestCard, PserverCard } from "../../ui";
 
 const InvestSection = () => {
@@ -54,9 +55,10 @@ const InvestSection = () => {
       </div>
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-12">
-            <PserverCard />
-            <PserverCard />
-            <PserverCard />
+          {PserveData.map(item => (
+            <PserverCard key={item.id} psimg={item.img} buserve={item.text} />
+          ))}
+            
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
 import { AssemgeCard, Button, SectorCard } from "../../ui";
 import SebAsset from "../../../assets/Sebastian Bennet (2).png";
 import { fixedata, stockData } from "../../../utils/data";
-
+import IRAsset from "../../../assets/investrealte.jpg"
+import Fplanassest from "../../../assets/fplanassest.jpg";
 
 const AsMangeSection = () => {
   return (
@@ -15,7 +16,7 @@ const AsMangeSection = () => {
       <hr />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14">
         <div>
-          <p>
+          <p data-aos="zoom-in">
             Our advisors connect your finances to what you want out of life and
             create a plan designed to make it happen, revealing possibilities
             while protecting you from the unexpected—today and every day after.
@@ -77,13 +78,13 @@ const AsMangeSection = () => {
           </div>
         </div>
         <div>
-          <img src={SebAsset} alt="" />
+          <img src={IRAsset} alt=""  className="w-full"/>
         </div>
       </div>
       <hr />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 justify-center items-center">
         <div>
-          <img src={SebAsset} alt="" />
+          <img src={Fplanassest} alt="" className="w-full" />
         </div>
         <div>
           <div>
@@ -95,7 +96,7 @@ const AsMangeSection = () => {
               <hr />
             </div>
             <p>These days, it's more important than ever to have a plan. Our version of financial planning not only gives you the confidence to know you're ready for anything, but is also designed to help you reach all your goals in the days ahead.</p>
-            <Button />
+            <Button btntext="Learn More" />
           </div>
         </div>
       </div>

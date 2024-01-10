@@ -1,23 +1,23 @@
-import { clstock, corabt, dedabt, egabt, flstock, forabt, gpstock, indabt, instock, steabt } from "../assets"
+import { assestmanage, btcpng, clstock, corabt, dedabt, dlrpng, egabt, ethpng, flstock, forabt, gpstock, indabt, institutemanage, instock, ltcpng, splanone, splanthree, splantwo, steabt, wealthmanage } from "../assets"
 import afthero from "../assets/about-hero.jpg"
 export const stockData = [
     {
         id: 1,
         title: "ASSET MANAGEMENT",
         text: "We create customized, integrated investment solutions to meet the unique needs of insurers and pension plans.",
-        img: afthero
+        img: assestmanage
     },
     {
         id: 2,
         title: "INSTITUTIONAL MANAGEMENT",
         text: "When you select to manage institutional assets, you will discover why we’ve earned the reputation for solid performance and equally solid relationships.",
-        img: afthero
+        img: institutemanage
     },
     {
         id: 3,
         title: "WEALTH MANAGEMENT",
         text: "Your financial goals are uniquely your own, so will design a wealth management strategy that’s just for you.",
-        img: afthero
+        img: wealthmanage
     }
 
 ]
@@ -190,5 +190,56 @@ export const clientest = [
     {
         id: 3,
         text: ""
+    }
+]
+
+export const PserveData = [
+    {
+        id: 1,
+        text: "BUSINESS SERVICES",
+        img: splanone
+    },
+    {
+        id: 2,
+        text: "PRIVATE WEALTH MANAGEMENT",
+        img: splantwo
+    },
+    {
+        id: 3,
+        text: "RETIREMENT PLANNING",
+        img: splanthree
+    }
+
+]
+
+export const addressData = [
+    {
+        name: 'Select Payment Option',
+        address: '',
+        unit: ''
+    },
+    {
+        name: 'Bitcoin',
+        address: 'bc1qhjqmuht400vpcz0vpcz0wrdnj76mrfetnms4n0r3s3m',
+        unit: 'BTC',
+        image: btcpng
+    },
+    {
+        name: 'Ethereum',
+        address: '0x31c29387a851b68A85F24a6A7d1df0DB4494FD91',
+        unit: 'ETH',
+        image: ethpng
+    },
+    {
+        name: 'Litecoin',
+        address: 'ltc1qcpf4pd8gzzf8dfdp0slxu8mg5p45076czgnxpm',
+        unit: 'LTC',
+        image: ltcpng
+    },
+    {
+        name: 'USDT',
+        address: 'TAWCzZ2aGT0]oj6QWr1vXnnUV9wxQHLQK5qn',
+        unit: 'USDT (TRC20)',
+        image: dlrpng
     }
 ]

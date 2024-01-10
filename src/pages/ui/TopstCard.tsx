@@ -6,7 +6,7 @@ interface Topstypes {
 
 const TopstCard = ({title, text}: Topstypes) => {
   return (
-    <div className="border border-primary rounded-lg">
+    <div className="border border-primary rounded-lg bg-[#f1f1f1] dark:bg-[#1f2937]">
         <div className="w-full bg-primary text-center rounded-lg py-4">
         <p>{title}</p>
         </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const InvestCard = () => {
   return (
-    <div className="py-16 px-8 rounded-xl border border-primary">
+    <div className="py-16 px-8 rounded-xl border border-primary bg-[#f1f1f1] dark:bg-[#1f2937]">
         <h2 className="text-3xl text-center">BRONZE PLAN</h2>
         <div className='flex flex-row gap-3'>
         <h1>$500 </h1>

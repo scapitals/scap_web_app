@@ -7,7 +7,7 @@ interface sectorTypes{
 
 const SectorCard = ({title, text, sub}: sectorTypes) => {
   return (
-    <div className="rounded border border-primary h-64 flex flex-col justify-between items-center">
+    <div className="rounded border border-primary h-64 flex flex-col justify-between items-center shadow bg-[#f1f1f1] dark:bg-[#1f2937]" data-aos="zoom-in" >
         <div className="w-full py-4 bg-primary">
           <h2 className="text-center">{title}</h2>
         </div>

@@ -6,7 +6,7 @@ interface Pstypes{
 
 const PserverCard = ({psimg, buserve}: Pstypes) => {
   return (
-    <div>
+    <div className="bg-[#f1f1f1] dark:bg-[#1f2937]">
         <img src={psimg} alt="" className="w-full" />
         <div className='w-full'>
             <p>PLANNING SERVICES</p>

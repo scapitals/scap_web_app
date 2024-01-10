@@ -7,7 +7,7 @@ interface SolidTypes {
 
 const SolidItemCard = ({img, title, text}: SolidTypes) => {
   return (
-    <div>
+    <div className="bg-[#f1f1f1] dark:bg-[#1f2937]">
         <img src={img} alt="" />
         <h3>{title}</h3>
         <p>{text}</p>

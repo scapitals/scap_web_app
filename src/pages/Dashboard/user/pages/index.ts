@@ -4,3 +4,8 @@ export {default as UserWallet} from "./UserWallet";
 export {default as UserKyc} from "./UserKyc";
 export {default as UserSupport} from "./UserSupport";
 export {default as UserRefferals} from "./UserRefferals";
+export {default as UserKycVerify} from "./UserKycVerify";
+export {default as UserDeposit} from "./UserDeposit";
+export {default as UserPayDataInfo} from "./UserPayDataInfo";
+export {default as UserWithdraw} from "./UserWithdraw";
+export {default as UserWdFunds} from "./UserWdFunds"
