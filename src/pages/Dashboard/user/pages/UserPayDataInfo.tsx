@@ -21,7 +21,7 @@ const UserPayDataInfo = () => {
       <div className="flex justify-between items-center p-3">
         <div>
           <h4>
-            {selectedAddress.name}
+            {selectedAddress?.name}
           </h4>
         </div>
         <h2>${amount}</h2>
@@ -31,17 +31,17 @@ const UserPayDataInfo = () => {
           style={{ height: "200px", width: "200px"}}
           className="rounded"
         >
-          <img src={selectedAddress.image} className="w-100" alt="" />
+          <img src={selectedAddress?.image} className="w-100" alt="" />
         </div>
         <p>Send ${amount} to the address below</p>
         <div className="d-flex w-75">
-          <input type="text" name="" value={selectedAddress.address} id="" className="w-100 rounded"/>
-          <CopyToClipboard text={selectedAddress.address} onCopy={() => setCopied(true)}>
+          <input type="text" name="" value={selectedAddress?.address} id="" className="w-100 rounded"/>
+          <CopyToClipboard text={selectedAddress?.address} onCopy={() => setCopied(true)}>
             <FaRegClipboard size={30} cursor="pointer" />
           </CopyToClipboard>
           {copied ? (<span style={{color: 'green'}}>Copied</span>): null }
         </div>
-        <p>Network Type: {selectedAddress.unit}</p>
+        <p>Network Type: {selectedAddress?.unit}</p>
         {/* <Link to='proof'> */}
           <button className="btn btn-success" onClick={() => navigate('/user/payment/proof')}>
             Mark as Completed

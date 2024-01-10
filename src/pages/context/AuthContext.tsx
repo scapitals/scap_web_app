@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import axios from "axios";
 import { hosturl } from "../../utils/ApiFeatures";
 
-export const AuthContext = createContext(null);
+export const AuthContext = createContext<any>(null);
 
 export const AuthProvider = ({ children }: any) => {
   const [data, setData] = useState(null);

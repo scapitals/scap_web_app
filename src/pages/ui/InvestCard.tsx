@@ -1,6 +1,6 @@
 import {IoCheckmarkCircle} from "react-icons/io5";
 import { Button } from ".";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 interface Investypes{
     name: String,

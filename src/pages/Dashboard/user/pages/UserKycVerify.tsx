@@ -7,10 +7,10 @@ import { hosturl } from "../../../../utils/ApiFeatures";
 import { AuthContext } from "../../../context/AuthContext";
 const UserKycVData = () => {
   const [kycFile, setKycFile] = useState("");
-  const [percent, setPercent] = useState(0);
+  // const [percent, setPercent] = useState(0);
   const [loading, setLoading] = useState(false)
 
- const inputRef = useRef(null);
+ const inputRef = useRef<any>(null);
 
  const {data} = useContext(AuthContext);
 
@@ -45,7 +45,7 @@ const UserKycVData = () => {
     try {
       setLoading(true)
       const kycinfo = await preFile('image');
-      const resp = await axios.patch(`${hosturl}/api/user/update/${data?._id}`, {
+      await axios.patch(`${hosturl}/api/user/update/${data?._id}`, {
         kycinfo,
       });
     } catch (error : any) {
@@ -86,7 +86,7 @@ const UserKycVData = () => {
                   onChange={(e: any) => setKycFile(e.target.files[0])}
                   ref={inputRef}
                 />
-                <p>{percent} % done</p>
+                {/* <p>{percent} % done</p> */}
                 <BsCloudUpload size={100} color="black" />
                 <p className="text-center text-black">
                   Upload Your Document here

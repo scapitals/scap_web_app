@@ -1,5 +1,5 @@
 import { Footer } from "../components";
-import {AsMangeSection, BlogSection, HeroSection, InvestSection, SectorHmSection} from "./components";
+import {AsMangeSection, BlogSection, InvestSection, SectorHmSection} from "./components";
 import TestHero from "./components/TestHero";
 
 const HomePg = () => {

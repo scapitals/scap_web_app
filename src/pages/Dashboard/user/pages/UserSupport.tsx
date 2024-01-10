@@ -69,11 +69,11 @@ const handleSubmit = async (e: any) => {
                   <label htmlFor="">Message</label>
                     <textarea name="" id="" value={message} cols={30} rows={10} className='w-full border border-primary rounded p-2' onChange={(e) => setMessage(e.target.value)}></textarea>
                 </div>
-                <button className="py-4 px-8 rounded-2xl bg-primary">Summit</button>
+                <button className="py-4 px-8 rounded-2xl bg-primary">{loading ? "loading..." : "loading"}</button>
             </form>
         </div>
         </div>
   )
 }
 
-export default UserSupport
+export default UserSupport;

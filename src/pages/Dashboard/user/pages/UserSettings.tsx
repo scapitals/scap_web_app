@@ -1,13 +1,13 @@
-import { useRef, useContext } from "react";
+import {useContext } from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+// import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
 // import { Button, form, Modal } from "react-bootstrap";
 import { useState } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { BsCloudUpload } from "react-icons/bs";
+// import { BsCloudUpload } from "react-icons/bs";
 
 const UserSettings = () => {
     const {data} = useContext(AuthContext);
@@ -15,7 +15,7 @@ const UserSettings = () => {
   const [number, setNumber] = useState(data?.number);
   const [email, setEmail] = useState(data?.email);
   const [dob, setDob] = useState(data?.dob);
-  const [profilePics, setProfilePics] = useState(data?.profilePics);
+  const [profilePics] = useState(data?.profilePics);
   const [country, setCountry] = useState(data?.country);
   const [city, setCity] = useState(data?.city);
   const [postcode, setPostcode] = useState(data?.postcode);
@@ -25,13 +25,13 @@ const UserSettings = () => {
   const [isUpload, setIsUpload] = useState(false);
   const [isUpdatePassword, setIsUpdatePassword] = useState(false);
 
-  const [newPassword, setNewPassword] = useState("");
-  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  // const [newPassword, setNewPassword] = useState("");
+  // const [confirmNewPassword, setConfirmNewPassword] = useState("");
 
-  const [file, setFile] = useState("");
-  const [percent, setPercent] = useState(0);
+  // const [file, setFile] = useState("");
+  // const [percent, setPercent] = useState(0);
 
-  const inputRef = useRef(null);
+  // const inputRef = useRef(null);
 
   // const uploadRef = () => {
   //   inputRef.current.click();
@@ -46,6 +46,7 @@ const UserSettings = () => {
     //   return;
     // }
     try {
+      setLoading(true)
     const updatedata = {fullname, dob, number, country, city, postcode, state}
     const result = await axios.patch(`https://specserver.vercel.app/api/user/update/${data?._id}`, updatedata);
       console.log(result.data)
@@ -53,6 +54,8 @@ const UserSettings = () => {
     } catch (err : any) {
       toast.error(err.code, {position: "bottom-left"})
       // console.log(err);
+    }finally{
+      setLoading(false);
     }
   };
 

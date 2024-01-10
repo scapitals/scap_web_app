@@ -39,7 +39,7 @@ const RegisterPg = () => {
           fullname,
           number,
         };
-      const regpro = await axios.post(
+      await axios.post(
         "https://specserver.vercel.app/api/user/register",
         regdata
       );
@@ -74,26 +74,26 @@ const RegisterPg = () => {
                 <form action="" className="w-full px-8 shadow-2xl rounded-2xl py-8" onSubmit={handleSubmit}>
                     <div className="flex flex-col gap-1 py-1">
                         <label htmlFor="">Full Name</label>
-                        <input type="text" className="p-1 w-full rounded-lg border border-primary" value={fullname} onChange={(e:any) => setFullName(e.target.value)}/>
+                        <input type="text" className="p-1 w-full rounded-lg border border-primary" value={fullname} onChange={(e:any) => setFullName(e.target.value)} required/>
                     </div>
                     <div className="flex flex-col gap-1 py-1">
                         <label htmlFor="">Email Address</label>
-                        <input type="email" className="p-1 w-full rounded-lg border border-primary" value={email} onChange={(e: any) => setEmail(e.target.value)}/>
+                        <input type="email" className="p-1 w-full rounded-lg border border-primary" value={email} onChange={(e: any) => setEmail(e.target.value)} required/>
                     </div>
                     <div className="flex flex-col gap-1 py-1">
                         <label htmlFor="">Phone Number</label>
-                        <input type="number" className="p-1 w-full rounded-lg border border-primary" value={number} onChange={(e: any) => setNumber(e.target.value)}/>
+                        <input type="number" className="p-1 w-full rounded-lg border border-primary" value={number} onChange={(e: any) => setNumber(e.target.value)} required/>
                     </div>
                     <div className="flex flex-col gap-1 py-1 relative">
                         <label htmlFor="">Password</label>
-                        <input type={visible ? "text" : "password"} className="p-1 w-full rounded-lg border border-primary" value={password} onChange={(e: any) => setPassword(e.target.value)}/>
+                        <input type={visible ? "text" : "password"} className="p-1 w-full rounded-lg border border-primary" value={password} onChange={(e: any) => setPassword(e.target.value)} required/>
                         <div className="absolute top-9 right-3 cursor-pointer">
                           {visible ? <AiOutlineEye size={25} color="green" onClick={() => setVisible(false)} /> : <AiOutlineEyeInvisible  color="green" size={25} onClick={() => setVisible(true)}/>}
                         </div>
                     </div>
                     <div className="flex flex-col gap-1 py-1 relative">
                         <label htmlFor="">Confirm Password</label>
-                        <input type={showPass ? "text" : "password"} className="p-1 w-full rounded-lg border border-primary"  value={passwordConfirm} onChange={(e: any) => setPasswordConfirm(e.target.value)}/>
+                        <input type={showPass ? "text" : "password"} className="p-1 w-full rounded-lg border border-primary"  value={passwordConfirm} onChange={(e: any) => setPasswordConfirm(e.target.value)} required/>
                         <div className="absolute top-9 right-3 cursor-pointer">
                           {showPass ? <AiOutlineEye size={25} color="green" onClick={() => setShowPass(false)} /> : <AiOutlineEyeInvisible  color="green" size={25} onClick={() => setShowPass(true)}/>}
                         </div>

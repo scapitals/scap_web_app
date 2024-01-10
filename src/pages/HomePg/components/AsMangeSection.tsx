@@ -1,5 +1,4 @@
 import { AssemgeCard, Button, SectorCard } from "../../ui";
-import SebAsset from "../../../assets/Sebastian Bennet (2).png";
 import { fixedata, stockData } from "../../../utils/data";
 import IRAsset from "../../../assets/investrealte.jpg"
 import Fplanassest from "../../../assets/fplanassest.jpg";

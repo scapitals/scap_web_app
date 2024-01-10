@@ -5,7 +5,7 @@ import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
 import {toast} from 'react-toastify'
 import Cookies from "js-cookie"
 import axios from "axios"
-import { useContext } from "react";
+// import {ThreeDots} from "react-loader-spinner"
 
 const LoginPg = () => {
 
@@ -13,7 +13,7 @@ const LoginPg = () => {
   const [password, setPassword] = useState('')
   const [visible, setVisible] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [isRecapVerify, setIsRecapVerify] = useState(false)
+  // const [isRecapVerify, setIsRecapVerify] = useState(false)
   const navigate = useNavigate()
   // const handleRecapChange = (value) => {
   //   setIsRecapVerify(true)
@@ -78,7 +78,7 @@ const LoginPg = () => {
                     <div>
 
                     </div>
-                    <button className="bg-primary rounded-xl py-2 px-4 text-lg">Login</button>
+                    <button className="bg-primary rounded-xl py-2 px-4 text-lg" disabled={loading ? true : false}>{loading ? "Loginning" : "Login"}</button>
                     <p>
                         Don't have an Account? 
                        <Link to="/register">
