@@ -46,6 +46,8 @@ const handleSubmit = async (e: any) => {
       });
     } catch (err: any) {
       toast.error(err.code, { position: "bottom-left" });
+    }finally{
+      setLoading(false)
     }
   };
 
@@ -56,10 +58,10 @@ const handleSubmit = async (e: any) => {
             <form className="w-full border border-primary p-4 rounded-lg shadow-lg flex flex-col gap-4 bg-[#f1f1f1] dark:bg-[#1f2937]" onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-2">
                     <label htmlFor="">Subject</label>
-                    <input type="text" name="" value={subject} onChange={(e) => setSubject(e.target.value)} id="" placeholder="Enter Subject" className="w-full border border-primary p-2 rounded-lg"/>
+                    <input type="text" name="" value={subject} onChange={(e) => setSubject(e.target.value)} id="" placeholder="Enter Subject" className="w-full border border-primary p-2 rounded-lg" required/>
                 </div>
                 <div>
-                    <select name="" id="" className="w-full p-2 rounded-lg border border-primary" onChange={(e) => setCategory(e.target.value)} value={category}>
+                    <select name="" id="" className="w-full p-2 rounded-lg border border-primary" onChange={(e) => setCategory(e.target.value)} value={category} required>
                       {options.map((item, index )=> (
                         <option value={item} key={index}>{item}</option>
                       ))}
@@ -67,9 +69,9 @@ const handleSubmit = async (e: any) => {
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="">Message</label>
-                    <textarea name="" id="" value={message} cols={30} rows={10} className='w-full border border-primary rounded p-2' onChange={(e) => setMessage(e.target.value)}></textarea>
+                    <textarea name="" id="" value={message} cols={30} rows={10} className='w-full border border-primary rounded p-2' onChange={(e) => setMessage(e.target.value)} required></textarea>
                 </div>
-                <button className="py-4 px-8 rounded-2xl bg-primary">{loading ? "loading..." : "loading"}</button>
+                <button className="py-4 px-8 rounded-2xl bg-primary">{loading ? "Submitting..." : "Submit"}</button>
             </form>
         </div>
         </div>

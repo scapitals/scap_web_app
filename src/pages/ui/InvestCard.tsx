@@ -12,7 +12,7 @@ interface Investypes{
 
 const InvestCard = ({name, minDeposit, maxDeposit, roi, time}: Investypes) => {
   return (
-    <div className="p-6 rounded-xl border border-primary bg-[#f1f1f1] dark:bg-[#1f2937] flex flex-col justify-center align-middle gap-8">
+    <div className="p-6 rounded-xl border border-primary bg-[#f1f1f1] dark:bg-[#1f2937] flex flex-col justify-center align-middle gap-8" data-aos="flip-up">
         <h2 className="text-3xl text-center">{name} PLAN</h2>
         <div className="flex flex-col gap-4 items-center">
          <div className='flex flex-row gap-3'>
@@ -53,7 +53,7 @@ const InvestCard = ({name, minDeposit, maxDeposit, roi, time}: Investypes) => {
                 <IoCheckmarkCircle />
             </div>
         </div>
-         <Button btntext="Get Started" btnlink="login"/>     
+         <Button btntext="Get Started" />     
             
         
     </div>

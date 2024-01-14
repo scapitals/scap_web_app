@@ -13,8 +13,8 @@ const InvestSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center">
-          <div>
-            <p className="text-xl">
+          <div data-aos="fade-up-right">
+            <p className="text-xl" >
               Spectrum Capitals offers a variety of trading accounts to match
               every trading style across all levels of experience. <br />
               Whether you’re a scalper or day trader, use EAs or are a

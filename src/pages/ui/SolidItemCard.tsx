@@ -7,10 +7,13 @@ interface SolidTypes {
 
 const SolidItemCard = ({img, title, text}: SolidTypes) => {
   return (
-    <div className="bg-[#f1f1f1] dark:bg-[#1f2937]">
-        <img src={img} alt="" />
-        <h3>{title}</h3>
-        <p>{text}</p>
+    <div className="bg-[#f1f1f1] dark:bg-[#1f2937] rounded-xl">
+      <img src={img} alt="" className="bg-black rounded-t-xl"/>
+      <div className="p-4">
+        <h3 className="text-xl font-[500]">{title}</h3>
+        <p className="text-sm">{text}</p>
+      </div>
+        
     </div>
   )
 }

@@ -1,14 +1,15 @@
-import { Navbar } from "../../components"
 import AbtHero from "../../../assets/about-hero.jpg";
 import { TopstData, solidProItems, tstockData } from "../../../utils/data";
 import { SolidItemCard, SusCard, TopstCard } from "../../ui";
+import Navigation from "../../components/Navigation";
+import { stocktwo } from "../../../assets";
 
 const Herosection = () => {
     const factItems = ["Stop and conditional orders may help protect your portfolio", "The price-to-earning (P/E) ratio can help you identify value stocks", "Compare earnings-per-share (EPS) between similar companies.", "Market capitalization (market cap) is the dollar value of a company", "Stock performance can fluctuate depending on market conditions"]
   return (
     <>
-    <div className="h-[50vh] w-full bg-abtimg bg-no-repeat bg-cover bg-center">
-        <Navbar />
+    <div className="h-[50vh] w-full bg-stkhero bg-no-repeat bg-cover bg-center">
+        <Navigation />
         <div className="container">
           <p>Products</p>
           <p>Stocks</p>
@@ -16,8 +17,7 @@ const Herosection = () => {
     </div>
     <div>
        <div className="container py-6">
-        <p className="text-lg md:text-3xl ">WHAT ARE STOCKS?</p>
-                <hr  className="w-32 md:w-64 h-1 dark:bg-[#f1f1f1] bg-[#1f2937]"/>
+        <p className="text-lg md:text-3xl underline">WHAT ARE STOCKS?</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-12">
             <div>
                 <p>A stock represents a share in the ownership of a company, including a claim on the company's earnings and assets. As such, stockholders are partial owners of the company. When the value of the business rises or falls, so does the value of the stock. Stocks are generally bought and sold electronically through stock exchanges, the two primary ones in the United States being the New York Stock Exchange (NYSE) and the National Association of Securities Dealers (NASDAQ). While some companies sell</p>
@@ -36,13 +36,13 @@ const Herosection = () => {
         <p>Asset classes perform differently, and it's nearly impossible to predict which asset class will perform best in a given year. If you had invested $100,000 in just U.S. Stocks in 1997, it would have almost quadrupled to $400,000 by 2017, but there would have been many ups and downs due to volatility. A more diversified investment portfolio would have had a lower return, but reduced volatility.</p>
         </div>
         <div>
-    <img src={AbtHero} alt="image" className="w-full rounded-lg" />
+    <img src={stocktwo} alt="image" className="w-full rounded-lg" />
         </div>
     </div>
     </div>
     <div className="container">
         <h2 className="text-lg md:text-3xl">WHY INVEST IN STOCKS WITH SOLIDVESTGLOBAL.COM?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-4">
             {solidProItems.map(item => (
                 <SolidItemCard key={item.id} img={item.img} title={item.title} text={item.text}/>
             ))}

@@ -1,6 +1,6 @@
 import {createBrowserRouter, Route, RouterProvider, Routes} from "react-router-dom";
 import {ToastContainer} from "react-toastify"
-import {HomePg, AboutPg, ContactPg, LoginPg, RegisterPg, FgtPwd, PlanServicePg, InvestmentstockPg} from "./pages";
+import {HomePg, AboutPg, ContactPg, LoginPg, RegisterPg, FgtPwd, PlanServicePg, InvestmentstockPg, InvestForexPg} from "./pages";
 import {FaSun, FaMoon} from "react-icons/fa"
 import { useTheme } from "next-themes";
 import "react-toastify/dist/ReactToastify.css";
@@ -51,7 +51,8 @@ useEffect(() =>{
         <Route path="/" element={<HomePg />} />
         <Route path="/about" element={<AboutPg />} />
         <Route path="/service" element={<PlanServicePg />} />
-        <Route path="/investment-stocks" element={<InvestmentstockPg />} />
+        <Route path="/stocks" element={<InvestmentstockPg />} />
+        <Route path="/forex" element={<InvestForexPg />} />
         <Route path="/user/*" element={<UserMain />} />
         <Route path="/login" element={<LoginPg />} />
         <Route path="/contact" element={<ContactPg />} />

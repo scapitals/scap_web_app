@@ -11,7 +11,9 @@ module.exports = {
         'subfooter': "url('https://www.solidvestglobal.com/files/quintet_counterpoint_midyear_webinar_banner.jpg')",
         'heroimgone': "url('https://res.cloudinary.com/dr6a80sph/image/upload/v1704494393/sean-pollock-PhYq704ffdA-unsplash_euydwu.jpg')",
         'heroimgtwo': "url('https://res.cloudinary.com/dr6a80sph/image/upload/v1704901825/kieroimg_2_cbdhes.jpg')",
-        'heroimgthree': "url('https://res.cloudinary.com/dr6a80sph/image/upload/v1704901830/kieroimg_lf0qym.jpg')"
+        'heroimgthree': "url('https://res.cloudinary.com/dr6a80sph/image/upload/v1704901830/kieroimg_lf0qym.jpg')",
+        stkhero: "url('assets/stockhero.jpg')",
+        stkheros: "url('assets/serviceone.jpg')"
       },
       colors: {
         // light mode

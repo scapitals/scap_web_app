@@ -1,15 +1,15 @@
-import Navbar from "../../components/Navbar";
 import AbuImg from "../../../assets/about-hero.jpg";
 import ces from "../../../assets/ces.jpg";
 import nwse from "../../../assets/nwse.png";
 import { SusCard } from "../../ui";
 import { sustainAbtDataOne, sustainAbtDataTwo } from "../../../utils/data";
+import Navigation from "../../components/Navigation";
 
 const Herosection = () => {
   return (
     <>
       <div className="h-[50vh] w-full bg-abtimg bg-no-repeat bg-cover bg-center">
-        <Navbar />
+        <Navigation />
         <div className="container">
           <p>About Us</p>
         </div>

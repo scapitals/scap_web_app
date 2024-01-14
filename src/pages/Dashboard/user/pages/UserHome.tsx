@@ -1,4 +1,3 @@
-import { AreaChart, Card, Title } from "@tremor/react"
 import { FaUserAlt } from "react-icons/fa"
 import { FaUserXmark } from "react-icons/fa6"
 import { BiMoneyWithdraw } from "react-icons/bi";
@@ -13,38 +12,6 @@ import { AuthContext } from "../../../context/AuthContext";
 import {IoMdCheckmarkCircleOutline} from "react-icons/io"
 
 const UserHome = () => {
-  const chartdata = [
-  {
-    date: "Jan 22",
-    SemiAnalysis: 2890,
-    "The Pragmatic Engineer": 2338,
-  },
-  {
-    date: "Feb 22",
-    SemiAnalysis: 2756,
-    "The Pragmatic Engineer": 2103,
-  },
-  {
-    date: "Mar 22",
-    SemiAnalysis: 3322,
-    "The Pragmatic Engineer": 2194,
-  },
-  {
-    date: "Apr 22",
-    SemiAnalysis: 3470,
-    "The Pragmatic Engineer": 2108,
-  },
-  {
-    date: "May 22",
-    SemiAnalysis: 3475,
-    "The Pragmatic Engineer": 1812,
-  },
-  {
-    date: "Jun 22",
-    SemiAnalysis: 3129,
-    "The Pragmatic Engineer": 1726,
-  },
-];
 
 const {data} = useContext(AuthContext);
 
@@ -67,11 +34,8 @@ let dataverify = data?.verified
   }
   }
 
-const valueFormatter = function(number: any) {
-  return "$ " + new Intl.NumberFormat("us").format(number).toString();
-};
   return (
-    <div className='container py-6'>
+    <div className='py-6'>
       <div  className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 w-full justify-between align-middle">
         <div>
          <p className="text-start text-2xl">Welcome, {data?.fullname}</p>
@@ -161,61 +125,15 @@ const valueFormatter = function(number: any) {
       </div>
         </div>
       </div>
-      
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 w-full justify-between align-middle">
-        <div className="rounded-lg shadow p-4 flex flex-col">
-          <h2>Account Balance</h2>
-          <h2>${data?.tAmount}.00</h2>
-          <div className="flex flex-row gap-4">
-            <Link to="/user/deposit">
-            <button className="bg-primary p-2 rounded text-white">Deposit</button>
-            </Link>
-            <button className="border border-primary p-2 rounded">Withdraw</button>
-          </div>
+      <div>
+        <h1 className="text-3xl">Personal Trading Chart</h1>
+        <div className="w-full my-5 bg-[#f1f1f1] dark:bg-[#1f2937]" style={{ height: "500px" }}>
+          <iframe
+            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_cd3c4&symbol=BINANCE%3ABTCUSD&interval=1&hidesidetoolbar=0&symboledit=1&saveimage=1&studies=%5B%5D&theme=dark&style=9&timezone=Etc%2FUTC&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en&utm_source=www.account.deepmargins.com&utm_medium=widget&utm_campaign=chart&utm_term=BINANCE%3ABTCUSD#%7B%22page-uri%22%3A%22www.account.deepmargins.com%2Foverview%22%7D"
+            // frameborder="0"
+            className="w-full h-full"
+          ></iframe>
         </div>
-        <div className="rounded-lg shadow">
-          <h2>Invite a Friend and get bonus</h2>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center">
-        <div className="rounded-lg shadow p-4 flex flex-col">
-          <h2>Account Balance</h2>
-          <p>$20.00</p>
-          <div className="flex flex-row gap-4">
-            <button className="bg-primary p-2 rounded text-white">Deposit</button>
-            <button className="border border-primary p-2 rounded">Withdraw</button>
-          </div>
-        </div>
-        <div className="rounded-lg shadow p-4 flex flex-col">
-          <h2>Account Balance</h2>
-          <p>$20.00</p>
-          <div className="flex flex-row gap-4">
-            <button className="bg-primary p-2 rounded text-white">Deposit</button>
-            <button className="border border-primary p-2 rounded">Withdraw</button>
-          </div>
-        </div>
-        <div className="rounded-lg shadow p-4 flex flex-col">
-          <h2>Account Balance</h2>
-          <p>$20.00</p>
-          <div className="flex flex-row gap-4">
-            <button className="bg-primary p-2 rounded text-white">Deposit</button>
-            <button className="border border-primary p-2 rounded">Withdraw</button>
-          </div>
-        </div>
-      </div>
-      <div className="w-full py-8">
-        <Card>
-    <Title>Newsletter revenue over time (USD)</Title>
-    <AreaChart
-      className="h-72 mt-4"
-      data={chartdata}
-      index="date"
-      categories={["SemiAnalysis", "The Pragmatic Engineer"]}
-      colors={["indigo", "cyan"]}
-      valueFormatter={valueFormatter}
-    />
-  </Card>
       </div>
     </div>
   )

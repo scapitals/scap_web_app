@@ -4,6 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import {FaArrowLeftLong} from "react-icons/fa6"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
+import Asimg from "../../assets/undraw_login.svg";
 
 const RegisterPg = () => {
     const [email, setEmail] = useState('')
@@ -59,14 +60,14 @@ const RegisterPg = () => {
   
   return (
      <div className="min-h-screen grid grid-cols-2 justify-between align-middle items-center">
-            <div className="bg-abtimg w-full h-full bg-cover bg-center">
+            <div className=" w-full h-full ">
                 <Link to="/">
-                 <div className="py-2 px-4 shadow-lg flex flex-row justify-between rounded-lg w-28 mt-12 ml-6 align-middle bg-white cursor-pointer">
-                    <FaArrowLeftLong size={24} />
-                    <p className="text-bold">Home</p>
+                 <div className="py-2 px-4 shadow-lg flex flex-row justify-between rounded-lg w-28 mt-12 ml-6 align-middle bg-[#f1f1f1] dark:bg-[#1f2937] cursor-pointer">
+                    <FaArrowLeftLong size={24} className="dark:fill-[#f1f1f1] fill-[#1f2937]" />
+                    <p className="">Home</p>
                 </div>   
                 </Link>
-                
+                 <img src={Asimg} alt="" className="w-full"/>   
             </div> 
             <div>
                 <h1 className="text-center text-3xl py-4">Register Page</h1>

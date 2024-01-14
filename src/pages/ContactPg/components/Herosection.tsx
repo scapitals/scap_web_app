@@ -1,13 +1,41 @@
-import { Navbar } from "../../components";
 import { FaEnvelope, FaLocationDot } from "react-icons/fa6";
 import {SlEarphonesAlt} from "react-icons/sl"
-import AbtAsset from "../../../assets/about-hero.jpg";
+import Navigation from "../../components/Navigation";
+import { contactImg } from "../../../assets";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 const Herosection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true)
+    try {
+      const condata = {fullname: name, email, subject, message}
+   await axios.post("https://specserver.vercel.app/api/user/contact", condata);
+      
+      setEmail('')
+      setMessage('')
+      setName('')
+      setSubject('')
+      setLoading(false)
+      toast.success('Message Received, We will get back to you Shortly', {
+        position: 'bottom-left'
+      })
+    } catch (err: any) {
+      throw new Error(err)
+    }
+  };
   return (
     <div>
       <div className="h-[50vh] bg-abtimg bg-center bg-cover">
-        <Navbar />
+        <Navigation />
         <div className="container">
           <div></div>
         </div>
@@ -38,17 +66,19 @@ const Herosection = () => {
             <p>Main Office Location</p>
           </div>
         </div>
-        <div className="grid grid-cols-2 rounded-lg py-12 shadow-lg">
-          <div className="h-[100%]">
-            <img src={AbtAsset} alt="" className="h-[100%]" />
+        <div className="grid md:grid-cols-2 grid-cols-1 rounded-lg py-12 shadow-lg h-[600px]">
+          <div className="h-[100%] hidden md:block">
+            <img src={contactImg} alt="" className="h-full object-cover" />
           </div>
-          <form action="" className="w-full px-10 shadow-2xl rounded-2xl p-12 bg-[#f1f1f1] dark:bg-[#1f2937]">
+          <form action="" className="w-full px-10 p-12 bg-[#f1f1f1] dark:bg-[#1f2937]" onSubmit={handleSubmit}>
             <div className="flex flex-row gap-3 w-full justify-between align-middle">
               <div className="flex flex-col gap-3">
                 <label htmlFor="">Your Full Name</label>
                 <input
-                  type="email"
+                  type="text"
                   className="p-2 w-full rounded-lg border border-primary"
+                  value={name}
+                  onChange={(e: any) => setName(e.target.value)}
                 />
               </div>
               <div className="flex flex-col gap-3">
@@ -56,6 +86,8 @@ const Herosection = () => {
                 <input
                   type="email"
                   className="p-2 w-full rounded-lg border border-primary"
+                  value={email}
+                  onChange={(e:any) => setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -63,8 +95,10 @@ const Herosection = () => {
             <div className="flex flex-col py-4">
               <label htmlFor="">Subject</label>
               <input
-                type="email"
+                type="text"
                 className="p-2 w-full rounded-lg border border-primary"
+                value={subject}
+                onChange={(e:any) => setSubject(e.target.value)}
               />
             </div>
             <div>
@@ -75,10 +109,12 @@ const Herosection = () => {
                 className="w-full border border-primary rounded-lg"
                 cols={30}
                 rows={10}
+                value={message}
+                onChange={(e:any) => setMessage(e.target.value)}
               ></textarea>
             </div>
             <button className="bg-primary rounded-xl py-2 px-4 text-lg">
-              Send
+              {loading ? "Sending" : "Send"}
             </button>
           </form>
         </div>

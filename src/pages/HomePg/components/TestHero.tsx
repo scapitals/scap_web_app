@@ -1,6 +1,6 @@
 import Slider from "react-slick";
-import { Navbar } from "../../components";
 import "./TestHero.css"
+import Navigation from "../../components/Navigation";
 
 const TestHero = () => {
     const settings = {
@@ -14,7 +14,7 @@ const TestHero = () => {
     }
   return (
     <div className="h-screen">
-        <Navbar />
+        <Navigation />
         <Slider {...settings}>
             <div className="h-[75vh] relative bg-heroimgone bg-center bg-cover flex justify-center items-center align-middle w-full">
                 <div className="w-1/2 flex justify-center align-middle absolute top-1/2 right-60">

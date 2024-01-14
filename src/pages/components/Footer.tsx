@@ -53,7 +53,7 @@ const Footer = () => {
           <h4>Subscribe Our Newletter to get updates</h4>
           <div>
             <input type="email" placeholder="Email Address" name="" id="" className="border border-primary p-2 rounded-xl"/>
-            <Button btntext="Subscribe" btnlink=""/>
+            <Button btntext="Subscribe" />
           </div>
         </div>
       </div>
