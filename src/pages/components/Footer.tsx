@@ -1,5 +1,6 @@
 import { FaEnvelope, FaFacebook, FaGithub, FaHome, FaLinkedin, FaPhone } from "react-icons/fa"
 import { Button } from "../ui"
+import { MainLogo } from "."
 
 const Footer = () => {
 
@@ -10,9 +11,12 @@ const Footer = () => {
      {/* <div className="bg-subfooter bg-cover bg-center h-[500px] w-full"></div> */}
     <div className="bg-footer py-6">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6 text-white justify-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6 text-white justify-start items-start">
         <div>
-          <h2>Logo</h2>
+          <div>
+            <MainLogo />
+          </div>
+          
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aliquid doloribus illum praesentium veniam id obcaecati. Expedita in voluptatum eaque. Totam ut quod facilis unde tempora? Ex quas, odit fuga culpa quos iusto eaque quis minima eius ipsam molestias? Minima!</p>
         </div>
         <div>

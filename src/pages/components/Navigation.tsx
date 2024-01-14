@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logosc.png";
 import { Button } from "../ui";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa6";
+import { MainLogo } from ".";
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="bg-transparent">
       <div className="flex items-center font-medium justify-around">
         <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-          <img src={Logo} alt="logo" className="md:cursor-pointer h-9" />
+          <MainLogo />
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             {open ? <FaTimes /> : <FaBars />}
           </div>

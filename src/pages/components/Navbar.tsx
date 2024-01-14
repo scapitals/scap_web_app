@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Button } from "../ui"
+import { MainLogo } from "."
 
 const Navbar = () => {
   return (
@@ -7,6 +8,7 @@ const Navbar = () => {
         <div className="flex justify-between align-middle items-center py-3 bg-transparent">
             <div>
                 <Link to="/">Logo</Link>
+                <MainLogo />
             </div>
             <ul className="flex flex-row gap-5">
                 <li>

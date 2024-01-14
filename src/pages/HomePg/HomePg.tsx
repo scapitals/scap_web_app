@@ -1,5 +1,5 @@
 import { Footer } from "../components";
-import {AsMangeSection, BlogSection, InvestSection, SectorHmSection} from "./components";
+import {AsMangeSection, InvestSection, SectorHmSection} from "./components";
 import TestHero from "./components/TestHero";
 
 const HomePg = () => {
@@ -10,7 +10,7 @@ const HomePg = () => {
       <AsMangeSection />
       <InvestSection />
       <SectorHmSection />
-      <BlogSection />
+      {/* <BlogSection /> */}
       <Footer />
     </div>
   )
