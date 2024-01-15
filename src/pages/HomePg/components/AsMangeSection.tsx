@@ -61,16 +61,13 @@ const AsMangeSection = () => {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-6">
             <div>
-              {/* <div className="bg-primary w-8 h-8 rounded-full"></div> */}
-              <p className="text-lg md:text-3xl underline">INVESTOR RELATIONS</p>
-              {/* <hr className="w-32 md:w-64 h-1 dark:bg-[#f1f1f1] bg-[#1f2937]"/> */}
+              <p className="text-lg md:text-3xl underline font-[Jost] pb-2">INVESTOR RELATIONS</p>
             </div>
             <p>provides advanced investment strategies and wealth management solutions to forward-thinking investors around the world. Through its distinct investment brands Management, we offers a diversity of investment approaches, encompassing bottom-up fundamental active management, Responsible Investing, systematic investing and customized implementation of client-specified portfolio exposures. Exemplary service, timely innovation and attractive returns across market cycles have been hallmarks of since the origin.</p>
           </div>
           <div className="flex flex-col gap-6">
             <div>
-              {/* <div className="bg-primary w-8 h-8 rounded-full"></div> */}
-              <p className="text-lg md:text-3xl underline">OUR DIVERSITY & INCLUSION STRATEGY</p>
+              <p className="text-lg md:text-3xl  font-[Jost] pb-2 underline">OUR DIVERSITY & INCLUSION STRATEGY</p>
               {/* <hr className="w-32 md:w-64 h-1 dark:bg-[#f1f1f1] bg-[#1f2937]"/> */}
             </div>
             <p>At , we want every person to have the opportunity to succeed based on merit, regardless of race, color, religion, creed, ancestry, national origin, sex, age, disability, marital status, citizenship status, sexual orientation, gender identity expression, military or veteran status, or any other criterion. Why is this so important? To us, diverse and inclusive teams enriched with people of distinctive backgrounds make us better. They help us generate better ideas, reach more balanced decisions, engage our communities and help our clients achieve better outcomes.</p>
@@ -90,7 +87,7 @@ const AsMangeSection = () => {
 
           </div>
             <div className="flex justify-start items-center flex-col gap-4">
-              <h2 className="text-lg md:text-3xl ">FINANCIAL PLANNING</h2>
+              <h2 className="text-lg md:text-3xl  font-[Jost] pb-2 ">FINANCIAL PLANNING</h2>
              <p>These days, it's more important than ever to have a plan. Our version of financial planning not only gives you the confidence to know you're ready for anything, but is also designed to help you reach all your goals in the days ahead.</p>
             <Button btntext="Learn More"/> 
             </div>
