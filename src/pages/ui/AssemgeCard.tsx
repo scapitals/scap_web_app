@@ -18,4 +18,4 @@ const AssemgeCard = ({assimg, asstitle, asstext}: AssType) => {
   )
 }
 
-export default AssemgeCard
+export default AssemgeCard;
