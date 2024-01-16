@@ -2,17 +2,33 @@ import { BiMoneyWithdraw } from "react-icons/bi";
 import { RiRefund2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import BtcIcon from "../../../../assets/bitcoin.png";
 import LiteCoin from "../../../../assets/litecoin.png";
 import EthIcon from "../../../../assets/ethereum.png";
+import SpinnerLoad from "../../../components/SpinnerLoad";
 
 const UserWallet = () => {
   const {data} = useContext(AuthContext)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Wallet"
+  }, [])
 
   return (
     <>
-    <div className='container'>
+    {loading ? (
+      <SpinnerLoad /> 
+    ): (
+      <>
+      <div className='container'>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-8 w-full justify-between align-middle">
         <div className="">
           <div className="py-4">
@@ -84,8 +100,10 @@ const UserWallet = () => {
           ></iframe>
         </div>
       </div>
-    </>
+      </>
     
+    )}
+    </>
   )
 }
 

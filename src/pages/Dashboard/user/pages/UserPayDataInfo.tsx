@@ -1,6 +1,8 @@
 // import { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { addressData } from "../../../../utils/data"
+import { useEffect, useState } from "react"
+import SpinnerLoad from "../../../components/SpinnerLoad"
 // import {CopyToClipboard} from "react-copy-to-clipboard"
 // import { FaRegClipboard } from "react-icons/fa"
 
@@ -10,9 +12,24 @@ const UserPayDataInfo = () => {
   const {amount} = useParams()
 
   // const [copied, setCopied] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Payment"
+  }, [])
 
   const selectedAddress = addressData.find((item : any) => item.name === wallet)
   return (
+     <>
+    {loading ? (
+      <SpinnerLoad /> 
+    ): (
     <div className="container">
         <div className="flex justify-center align-middle items-center">
             <div className="border border-primary rounded-xl">
@@ -54,6 +71,8 @@ const UserPayDataInfo = () => {
             </div>
         </div>
     </div>
+    )}
+    </>
   )
 }
 

@@ -1,7 +1,24 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import SpinnerLoad from '../../../components/SpinnerLoad'
 
 const UserWithdraw = () => {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Withdraw"
+  }, [])
   return (
+    <>
+    {loading ? (
+      <SpinnerLoad /> 
+    ): (
     <div className='container py-20'>
         <h2 className='text-center'>Withdraw from your account</h2>
         <p className='text-center'>Place a withdrawal request using any of the payment method below</p>
@@ -21,6 +38,8 @@ const UserWithdraw = () => {
             </div>
         </div>
     </div>
+    )}
+    </>
   )
 }
 

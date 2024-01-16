@@ -1,10 +1,11 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Asimg from "../../assets/undraw_login.svg";
+import SpinnerLoad from "../components/SpinnerLoad";
 
 const RegisterPg = () => {
   const [email, setEmail] = useState("");
@@ -19,6 +20,19 @@ const RegisterPg = () => {
   //   const [isRecapVerify, setIsRecapVerify] = useState(false)
 
   const navigate = useNavigate();
+
+  const [loadingSpin, setLoadingSpin] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingSpin(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Login"
+  }, [])
+
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -56,6 +70,10 @@ const RegisterPg = () => {
   };
 
   return (
+    <>
+    {loadingSpin ? (
+      <SpinnerLoad /> 
+    ): (
     <div className="min-h-screen grid md:grid-cols-2 grid-cols-1 justify-between align-middle items-center">
       <div className="md:block hidden w-full h-full ">
         <Link to="/">
@@ -181,6 +199,8 @@ const RegisterPg = () => {
         </div>
       </div>
     </div>
+         )}
+    </>
   );
 };
 

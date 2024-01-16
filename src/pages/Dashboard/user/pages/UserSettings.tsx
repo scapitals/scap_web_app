@@ -1,4 +1,4 @@
-import {useContext } from "react";
+import {useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
@@ -7,6 +7,7 @@ import { useState } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import axios from "axios";
 import { toast } from "react-toastify";
+import SpinnerLoad from "../../../components/SpinnerLoad";
 // import { BsCloudUpload } from "react-icons/bs";
 
 const UserSettings = () => {
@@ -25,18 +26,17 @@ const UserSettings = () => {
   const [isUpload, setIsUpload] = useState(false);
   const [isUpdatePassword, setIsUpdatePassword] = useState(false);
 
-  // const [newPassword, setNewPassword] = useState("");
-  // const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [loadingSet, setLoadingSet] = useState(true)
 
-  // const [file, setFile] = useState("");
-  // const [percent, setPercent] = useState(0);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingSet(false)
+    }, 2000)
+  }, [])
 
-  // const inputRef = useRef(null);
-
-  // const uploadRef = () => {
-  //   inputRef.current.click();
-  // };
-
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Settings"
+  }, [])
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     // if (profilePics === "") {
@@ -61,9 +61,10 @@ const UserSettings = () => {
 
   return (
     <>
-      {/* Upload Profile Picture */}
-
-      <div className="h-fit w-[75%] mx-auto p-3 rounded-2xl my-3 bg-primary mt-8">
+     {loadingSet ? (
+      <SpinnerLoad /> 
+    ): (
+      <div className="h-fit w-[75%] mx-auto p-3 rounded-2xl my-1 bg-primary mt-8">
         <div className="flex justify-between items-center py-2 flex-wrap">
           <div className="flex">
             <div>
@@ -221,6 +222,7 @@ const UserSettings = () => {
           </div>
         </form>
       </div>
+    )}
     </>
   );
 };

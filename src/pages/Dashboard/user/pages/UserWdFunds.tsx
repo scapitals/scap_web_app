@@ -1,8 +1,9 @@
 import { toast } from "react-toastify";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import axios from "axios";
+import SpinnerLoad from "../../../components/SpinnerLoad";
 
 const UserWdFunds = () => {
   const [otp, setOtp] = useState(0);
@@ -12,6 +13,18 @@ const UserWdFunds = () => {
   const {data} = useContext(AuthContext);
 
   const navigate = useNavigate()
+
+  const [loadingWd, setLoadingWd] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingWd(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Withdraw"
+  }, [])
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -67,6 +80,10 @@ const UserWdFunds = () => {
     }
   };
   return (
+    <>
+    {loadingWd ? (
+      <SpinnerLoad /> 
+    ): (
     <div className="container">
      <div className="flex justify-center items-center flex-col py-5">
       <h3>Complete withdrawal request</h3>
@@ -129,7 +146,8 @@ const UserWdFunds = () => {
       </div>
     </div>   
     </div>
-    
+    )}
+    </>
   );
 };
 

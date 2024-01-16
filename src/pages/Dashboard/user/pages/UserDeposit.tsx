@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {toast} from "react-toastify"
 import { useNavigate } from "react-router-dom";
 import { addressData } from "../../../../utils/data";
+import SpinnerLoad from "../../../components/SpinnerLoad";
 
 const UserDeposit = () => {
     const navigate = useNavigate();
@@ -9,6 +10,18 @@ const UserDeposit = () => {
   const [amount, setAmount] = useState(0);
   const [select, setSelect] = useState("");
   // const [display, setDisplay] = useState(false);
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Deposit"
+  }, [])
+
 
   const SelectChange = (e : any) => {
     setSelect(e.target.value);
@@ -51,6 +64,10 @@ const UserDeposit = () => {
     }
   };
   return (
+    <>
+    {loading ? (
+      <SpinnerLoad /> 
+    ): (
     <div className="container">
         <div>
             <form
@@ -85,6 +102,8 @@ const UserDeposit = () => {
         </form>
         </div>
     </div>
+    )}
+    </>
   )
 }
 

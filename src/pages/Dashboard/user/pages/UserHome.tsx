@@ -7,11 +7,23 @@ import { AiOutlineGift } from "react-icons/ai";
 import { BsPersonAdd } from "react-icons/bs";
 import { FaWallet } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import {IoMdCheckmarkCircleOutline} from "react-icons/io"
+import SpinnerLoad from "../../../components/SpinnerLoad";
 
 const UserHome = () => {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | User Home"
+  }, [])
 
 const {data} = useContext(AuthContext);
 
@@ -35,6 +47,10 @@ let dataverify = data?.verified
   }
 
   return (
+    <>
+    {loading ? (
+      <SpinnerLoad /> 
+    ): (
     <div className='py-6'>
       <div  className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 w-full justify-between align-middle">
         <div>
@@ -136,6 +152,8 @@ let dataverify = data?.verified
         </div>
       </div>
     </div>
+    )}
+    </>
   )
 }
 

@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../context/AuthContext";
+import SpinnerLoad from "../../../components/SpinnerLoad";
 
 const UserSupport = () => {
     const [subject, setSubject] = useState("");
@@ -10,6 +11,17 @@ const UserSupport = () => {
   const [loading, setLoading] = useState(false);
 
   const {data} = useContext(AuthContext);
+  const [loadingSup, setLoadingSup] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingSup(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Support"
+  }, [])
 
   const options = [
     "Select Categories",
@@ -52,6 +64,10 @@ const handleSubmit = async (e: any) => {
   };
 
   return (
+    <>
+    {loadingSup ? (
+      <SpinnerLoad /> 
+    ): (
     <div className='container py-6'>
         <p className='text-center text-3xl pb-4'>Support</p>
         <div className="w-full">
@@ -75,6 +91,8 @@ const handleSubmit = async (e: any) => {
             </form>
         </div>
         </div>
+    )}
+    </>
   )
 }
 

@@ -1,10 +1,11 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { BsCloudUpload } from "react-icons/bs";
 import axios from "axios";
 import {ThreeDots} from "react-loader-spinner";
 import { hosturl } from "../../../../utils/ApiFeatures";
 import { AuthContext } from "../../../context/AuthContext";
+import SpinnerLoad from "../../../components/SpinnerLoad";
 const UserKycVData = () => {
   const [kycFile, setKycFile] = useState("");
   // const [percent, setPercent] = useState(0);
@@ -13,6 +14,18 @@ const UserKycVData = () => {
  const inputRef = useRef<any>(null);
 
  const {data} = useContext(AuthContext);
+
+ const [loadingKyc, setLoadingKyc] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingKyc(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | KYC Verify"
+  }, [])
 
   const preFile = async (type : any) => {
     const data = new FormData();
@@ -60,6 +73,10 @@ const UserKycVData = () => {
   };
 
   return (
+    <>
+    {loadingKyc ? (
+      <SpinnerLoad /> 
+    ): (
     <div className="container py-6">
       <div>
         <h2 className="text-center py-4 text-3xl">TIER TWO VERIFICATION</h2>
@@ -103,6 +120,8 @@ const UserKycVData = () => {
         </div>
       </div>
     </div>
+    )}
+    </>
   );
 };
 

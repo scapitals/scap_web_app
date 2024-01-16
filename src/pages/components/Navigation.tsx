@@ -6,10 +6,12 @@ import { FaAngleDown } from "react-icons/fa6";
 import { MainLogo } from ".";
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+
+  document
   return (
     <nav className="bg-transparent">
       <div className="flex items-center font-medium justify-around">
-        <div className="z-50 p-5 md:w-auto w-full flex justify-between">
+        <div className="z-20 p-5 md:w-auto w-full flex justify-between">
           <MainLogo />
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
             {open ? <FaTimes /> : <FaBars />}
@@ -43,16 +45,16 @@ const Navigation = () => {
                 <div className="py-3">
                   <div
                     className="w-4 h-4 left-3 absolute 
-                    mt-1 bg-white rotate-45"
+                    mt-1 bg-[#f1f1f1] dark:bg-[#1f2937] rotate-45"
                   ></div>
                 </div>
-                <div className="bg-white p-5 w-48 flex flex-col gap-10">
-                  <li className="text-lg text-gray-600 my-1">
+                <div className="bg-[#f1f1f1] dark:bg-[#1f2937] p-5 w-48 flex flex-col gap-10">
+                  <li className="text-lg text-black dark:text-white  my-1">
                     <Link to="/stocks" className="hover:text-primary">
                       Stock
                     </Link>
                   </li>
-                  <li className="text-lg text-gray-600 my-1">
+                  <li className="text-lg text-black dark:text-white  my-1">
                     <Link to="/forex" className="hover:text-primary">
                       Forex
                     </Link>
@@ -103,6 +105,11 @@ const Navigation = () => {
           <li>
             <Link to="/forex" className="py-1 px-3 inline-block">
                Forex
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="py-1 px-3 inline-block">
+               Contact
             </Link>
           </li>
           <div className="px-3 text-left md:cursor-pointer group">

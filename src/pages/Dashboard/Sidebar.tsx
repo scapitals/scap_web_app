@@ -13,6 +13,7 @@ import {
 import Cookies from 'js-cookie';
 import { IoLogOutSharp } from 'react-icons/io5';
 import { toast } from 'react-toastify';
+import { MainLogo } from '../components';
 
 const Sidebar = ({children}: any) => {
     // const[isOpen ,setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ const Sidebar = ({children}: any) => {
     const [logoutModal, setLogoutModal] = useState(false);
     const [open, setOpen] = useState(false);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const logOutFunc = () => {
     try{  
@@ -79,6 +80,7 @@ const Sidebar = ({children}: any) => {
 
     return (
         <>
+        
         {/* <div className='flex justify-between items-center p-4'>
             <h1>Logo</h1>
             <div onClick={() => setShowMenu(true)} className='cursor-pointer'>bars</div>
@@ -97,7 +99,7 @@ const Sidebar = ({children}: any) => {
         `}
         >
             {menuItem.map((item, index) => (
-               <li key={index}>
+               <li key={index} onClick={() => setOpen(false)}>
             <Link to={item.path} className="py-1 px-3 inline-block">
               {item.name}
             </Link>
@@ -110,7 +112,7 @@ const Sidebar = ({children}: any) => {
              <div className=" bg-black h-screen w-0 md:w-56 py-4 text-white fixed hidden md:block">
                <div className="flex flex-row p-6">
                 <Link to="/">
-                    <h1 className="logo">Logo</h1>
+                    <MainLogo />
                     </Link>
                </div>
                {

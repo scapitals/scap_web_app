@@ -1,11 +1,12 @@
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import axios from "axios";
 import Asimg from "../../assets/undraw_login.svg";
+import SpinnerLoad from "../components/SpinnerLoad";
 // import {ThreeDots} from "react-loader-spinner"
 
 const LoginPg = () => {
@@ -18,6 +19,17 @@ const LoginPg = () => {
   // const handleRecapChange = (value) => {
   //   setIsRecapVerify(true)
   // }
+  const [loadingSpin, setLoadingSpin] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingSpin(false)
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    document.title = "Spectrum Capitals | Login"
+  }, [])
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -50,6 +62,10 @@ const LoginPg = () => {
   };
 
   return (
+    <>
+    {loadingSpin ? (
+      <SpinnerLoad /> 
+    ): (
     <div className="min-h-screen grid md:grid-cols-2 grid-cols-1 justify-between align-middle items-center">
       <div className=" md:block hidden w-full h-full">
         <Link to="/">
@@ -129,6 +145,8 @@ const LoginPg = () => {
         </div>
       </div>
     </div>
+        )}
+    </>
   );
 };
 
