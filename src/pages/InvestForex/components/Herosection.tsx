@@ -1,5 +1,6 @@
 import Navigation from "../../components/Navigation";
 import Fxtimg from "../../../assets/about-hero.jpg";
+import { forexassets, instimanage, instragety, privassets, realassets } from "../../../assets";
 
 const Herosection = () => {
   return (
@@ -79,12 +80,12 @@ const Herosection = () => {
               </p>
             </div>
             <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+              <img src={realassets} alt="" className="w-full rounded-xl" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
             <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+              <img src={instragety} alt="" className="w-full rounded-xl" />
             </div>
             <div>
               <h3 className="text-3xl font-[Jost] pb-2">Infrastructure</h3>
@@ -138,7 +139,7 @@ const Herosection = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
             <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+              <img src={forexassets} alt="" className="w-full rounded-xl" />
             </div>
             <div>
               <h3 className="text-3xl font-[Jost] pb-2">Foreign Exchange</h3>
@@ -167,7 +168,7 @@ const Herosection = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
             <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+              <img src={instragety} alt="" className="w-full rounded-xl" />
             </div>
             <div>
               <div>
@@ -194,12 +195,12 @@ const Herosection = () => {
               </p>
             </div>
             <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+              <img src={instimanage} alt="" className="w-full rounded-xl" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
             <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+              <img src={privassets} alt="" className="w-full rounded-xl" />
             </div>
             <div>
               <h3 className="text-3xl font-[Jost] pb-2">Private Equity</h3>

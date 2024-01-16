@@ -10,10 +10,9 @@ const HeroSection = () => {
         <div className="container flex justify-center items-center">
             <div className="w-full md:w-1/2 flex flex-col gap-8 justify-center items-center py-12">
                 <h1 className="text-6xl text-center font-['Jost'] pt-10">
-                    FULLY INVESTED IN BETTER OUTCOMES
+                    EMPOWER YOUR WEALTH JOURNEY
                 </h1>
-                <p className="text-center text-xl">As a global investment firm, we foster diverse perspectives and embrace
-                innovation to help our clients navigate the uncertainty of capital markets</p>
+                <p className="text-center text-xl">Navigate the markets with confidence using our advanced trading platform, designed for both beginners and seasoned investors seeking precision, speed, and reliability</p>
                 <div>
                     <Link to="/login">
                         <Button btntext="Get Started" /> 

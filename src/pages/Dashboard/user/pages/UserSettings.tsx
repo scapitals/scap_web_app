@@ -62,91 +62,25 @@ const UserSettings = () => {
   return (
     <>
       {/* Upload Profile Picture */}
-      {/* <Modal show={isUpload} onHide={() => setIsUpload(false)}>
-        <Modal.Body>
-          <form>
-            <div className="mb-3">
-              <div className="verify-box" onClick={uploadRef}>
-                <input
-                  type="file"
-                  name=""
-                  style={{ display: "none" }}
-                  accept="/image/*"
-                  id=""
-                  onChange={(e) => setFile(e.target.files[0])}
-                  ref={inputRef}
-                />
-                <p>{percent} % done</p>
-                <BsCloudUpload size={100} color="black" />
-                <p className="text-center text-black">
-                  Upload Your Document here
-                </p>
-              </div>
-              <button style={{margin: "0px auto"}} className="btn btn-success" >Upload</button>
-            </div>
-          </form>
-        </Modal.Body>
-        <Modal.Footer>
-          <button variant="dark" onClick={uploadFile}>
-            Upload
-          </button>
-        </Modal.Footer>
-      </Modal>
-      Update Password
-      <Modal show={isUpdatePassword} onHide={() => setIsUpdatePassword(false)}>
-        <Modal.Body>
-          <form>
-            <div className="mb-3">
-              <label>New Password</label>
-              <form.Control
-                type="password"
-                placeholder="New Password"
-                autoFocus
-              />
-            </div>
-            <div className="mb-3">
-              <label>Re-Enter New Password</label>
-              <form.Control
-                type="email"
-                placeholder="Re-Enter New Password"
-                value={confirmNewPassword}
-                onChange={(e) => setConfirmNewPassword(e.target.value)}
-                autoFocus
-              />
-            </div>
-          </form>
-        </Modal.Body>
-        <Modal.Footer>
-          <button variant="success" onClick={handleChangePassword}>
-            Yes
-          </button>
-          <button variant="primary" onClick={() => setIsUpdatePassword(false)}>
-            No
-          </button>
-        </Modal.Footer>
-      </Modal> */}
 
       <div className="h-fit w-[75%] mx-auto p-3 rounded-2xl my-3 bg-primary mt-8">
         <div className="flex justify-between items-center py-2 flex-wrap">
           <div className="flex">
             <div>
               {data?.profilePics === "" ? (
-                <BiUserCircle size={40} />
+                <BiUserCircle size={45} />
               ) : (
                 <div>
                   <img
                     src={profilePics}
                     alt="image"
-                    style={{
-                      width: "70px",
-                      height: "70px",
-                      borderRadius: "50%",
-                    }}
+                    className="w-32 h-32 rounded-full"
+                   
                   />
                 </div>
               )}
             </div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div className="flex flex-col gap-2">
               <span>{fullname}</span>
               <span>{email}</span>
             </div>
@@ -160,14 +94,7 @@ const UserSettings = () => {
             </div>
           </div>
           <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+              className="flex flex-col gap- items-center justify-center">
             <button
               className="bg-black py-2 px-4 rounded-xl text-white"
               onClick={() => setIsUpdatePassword(!isUpdatePassword)}
@@ -181,7 +108,7 @@ const UserSettings = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="bg-white rounded p-4 w-full">
-          <div className="flex flex-row justify-between items-center px-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-between items-center px-3">
             <div className="flex flex-col">
               <label className="text-black">Full Name</label>
               <input
@@ -207,7 +134,7 @@ const UserSettings = () => {
               />
             </div>
           </div>
-          <div className="flex flex-row justify-between items-center px-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-between items-center px-3">
             <div className="flex flex-col">
               <label className="text-black">Phone Number</label>
               <input
@@ -234,7 +161,7 @@ const UserSettings = () => {
             </div>
           </div>
           <h4 className="text-black mt-3 font-bold">Address</h4>
-          <div className="flex flex-row justify-between items-center px-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-between items-center px-3">
             <div className="flex flex-col">
               <label className="text-black">Country</label>
               <input
@@ -260,7 +187,7 @@ const UserSettings = () => {
               />
             </div>
           </div>
-          <div className="flex flex-row justify-between items-center px-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 justify-between items-center px-3">
             <div className="flex flex-col">
               <label className="text-black">Post Code</label>
               <input

@@ -1,6 +1,8 @@
 import Slider from "react-slick";
 import "./TestHero.css"
 import Navigation from "../../components/Navigation";
+import { Button } from "../../ui";
+import { Link } from "react-router-dom";
 
 const TestHero = () => {
     const settings = {
@@ -16,27 +18,41 @@ const TestHero = () => {
     <div className="h-screen">
         <Navigation />
         <Slider {...settings}>
-            <div className="h-[75vh] bg-heroimgone bg-center bg-opacity-50 bg-cover flex justify-center items-center align-middle w-full">
-                <div className="flex justify-center items-center">
-                <div className="md:w-1/2 w-full flex flex-col">
-                    <p className="text-center text-2xl" data-aos="zoom-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium dolor explicabo vitae! Accusantium excepturi iste, reiciendis enim pariatur nam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, natus modi iure voluptatum corporis neque, tempore aspernatur quisquam aut omnis inventore quia fuga alias assumenda sequi, est architecto ut ab. Sapiente, reprehenderit est quas facilis facere itaque necessitatibus molestias quae quis minima obcaecati, ut repellendus eum eaque aperiam nostrum animi.</p>
+            <div className="h-[75vh] bg-heroimgone bg-center bg-opacity-50 bg-cover flex justify-center items-center align-middle w-full ">
+                <div className="flex justify-center items-center backdrop-brightness-50 border-l-indigo-900 w-full h-full text-white">
+                <div className="md:w-1/2 w-full flex flex-col gap-4 justify-center items-center">
+                  <h3 className="text-4xl">EMPOWER YOUR WEALTH JOURNEY</h3>
+
+                    <p className="text-center text-lg">Navigate the markets with confidence using our advanced trading platform, designed for both beginners and seasoned investors seeking precision, speed, and reliability</p>
+                    <Link to="/login">
+                     <Button btntext="Get Started"/> 
+                    </Link>
+                    
                 </div>
               </div>
                
             </div>
             <div className="h-[75vh] bg-heroimgtwo bg-center bg-cover bg-opacity-80">
-              <div className="flex justify-center items-center">
-                <div className="md:w-1/2 w-full flex flex-col">
-                    <p className="text-center text-2xl" data-aos="zoom-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium dolor explicabo vitae! Accusantium excepturi iste, reiciendis enim pariatur nam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, natus modi iure voluptatum corporis neque, tempore aspernatur quisquam aut omnis inventore quia fuga alias assumenda sequi, est architecto ut ab. Sapiente, reprehenderit est quas facilis facere itaque necessitatibus molestias quae quis minima obcaecati, ut repellendus eum eaque aperiam nostrum animi.</p>
+              <div className="flex justify-center items-center backdrop-brightness-50 border-l-indigo-900 w-full h-full text-white">
+                <div className="md:w-1/2 w-full flex flex-col gap-4 justify-center items-center">
+                  <h3 className="text-4xl text-center">UNLOCKING YOUR FINANCIAL POTENTIALS</h3>
+                    <p className="text-center text-lg" >Our user-friendly interface and powerful tools make trading and investing accessible to everyone. Whether you're a seasoned pro or just starting, we've got you covered.</p>
+                    <Link to="/login">
+                     <Button btntext="Get Started"/> 
+                    </Link>
                 </div>
               </div>
                 
                 
             </div>
             <div className="h-[75vh] bg-heroimgthree bg-center bg-cover">
-                <div className="flex justify-center items-center">
-                <div className="md:w-1/2 w-full flex flex-col">
-                    <p className="text-center text-2xl" data-aos="zoom-in">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium dolor explicabo vitae! Accusantium excepturi iste, reiciendis enim pariatur nam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, natus modi iure voluptatum corporis neque, tempore aspernatur quisquam aut omnis inventore quia fuga alias assumenda sequi, est architecto ut ab. Sapiente, reprehenderit est quas facilis facere itaque necessitatibus molestias quae quis minima obcaecati, ut repellendus eum eaque aperiam nostrum animi.</p>
+                <div className="flex justify-center items-center backdrop-brightness-50 border-l-indigo-900 w-full h-full text-white">
+                <div className="md:w-1/2 w-full flex flex-col gap-4 justify-center items-center">
+                  <h3 className="text-4xl text-center"> EXPERIENCE THE FUTURE OF FINANCIAL FREEDOM</h3>
+                    <p className="text-center text-lg"> Our platform combines advanced technology and expert insights to revolutionize your trading and investment journey.</p>
+                    <Link to="/login">
+                     <Button btntext="Get Started"/> 
+                    </Link>
                 </div>
               </div>
                 
