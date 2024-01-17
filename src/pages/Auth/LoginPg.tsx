@@ -5,7 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { toast } from "react-toastify";
 import Cookies from "js-cookie";
 import axios from "axios";
-import Asimg from "../../assets/undraw_login.svg";
+import Asimg from "../../assets/Sign in-bro.svg";
 import SpinnerLoad from "../components/SpinnerLoad";
 // import {ThreeDots} from "react-loader-spinner"
 
@@ -77,7 +77,7 @@ const LoginPg = () => {
             <p className="">Home</p>
           </div>
         </Link>
-        <img src={Asimg} alt="" className="w-full" />
+        <img src={Asimg} alt="" className="w-[75%] mx-auto" />
       </div>
       <div>
           <Link to="/" className=" md:hidden block">

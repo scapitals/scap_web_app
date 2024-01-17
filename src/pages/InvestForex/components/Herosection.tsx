@@ -1,6 +1,5 @@
 import Navigation from "../../components/Navigation";
-import Fxtimg from "../../../assets/about-hero.jpg";
-import { forexassets, instimanage, instragety, privassets, realassets } from "../../../assets";
+import { comassestsfx, credassetsfx, cryassetsfx, forexassets, hexassestsfx, instimanage, instragety, privassets, realassets } from "../../../assets";
 
 const Herosection = () => {
   return (
@@ -8,19 +7,19 @@ const Herosection = () => {
       <div className="h-[50vh] w-full bg-stkheros bg-no-repeat bg-opacity-50 bg-cover bg-center">
         <Navigation />
         <div className="container">
-          <p>Planning Services</p>
+          <p className='text-2xl font-[600]'>Foreign Exchange</p>
         </div>
       </div>
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
           <div>
-            <p data-aos="zoom-in">
+            <p >
               Our advisors connect your finances to what you want out of life
               and create a plan designed to make it happen, revealing
               possibilities while protecting you from the unexpected—today and
               every day after.
             </p>
-            <ul>
+            <ul >
               <li>
                 A personalized plan that brings all aspects of your financial
                 life together
@@ -61,7 +60,7 @@ const Herosection = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
+            <div data-aos="fade-up-left">
               <h3 className="text-3xl font-[Jost] pb-2">Real Assets</h3>
               <p className="text-md">
                 These funds typically invest in tangible assets that derive
@@ -71,7 +70,7 @@ const Herosection = () => {
                 looking to add a broad real assets allocation to their private
                 markets portfolio and gain access to key market sectors,
                 including energy, power, infrastructure, and natural resources
-                turn to solidvestglobal.com. Real assets also serve as a crucial
+                turn to Spectrum Capitals Real assets also serve as a crucial
                 portfolio diversifier as they tend to respond to different
                 economic conditions than other private asset classes. The
                 performance of real assets, for example, has been positively
@@ -79,46 +78,46 @@ const Herosection = () => {
                 during periods when prices have risen.
               </p>
             </div>
-            <div>
+            <div data-aos="fade-up-right">
               <img src={realassets} alt="" className="w-full rounded-xl" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
+            <div data-aos="fade-up-left">
               <img src={instragety} alt="" className="w-full rounded-xl" />
             </div>
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">Infrastructure</h3>
+            <div data-aos="fade-up-right">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Infrastructure</h3>
               <p className="text-md">
                 We are one of the world's largest infrastructure investors, owning and operating assets across the utilities, transport, energy and data infrastructure sectors. Our portfolio, grounded in 7 years of investment experience, provides diversified exposure to scarce, high-quality businesses with significant barriers to entry. We invest in infrastructure assets that deliver essential goods and services - from the movement of passengers and freight over toll roads and rail networks to the distribution of energy and other products through ports and pipelines, and much more.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">Commodities</h3>
+            <div data-aos="fade-up-left">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Commodities</h3>
               <div>
                 <h4>Who we are</h4>
-                <p className="text-md">solidvestglobal.com's commodities team seeks to generate alpha through directional and relative value strategies across both physical and financial commodities markets. We evaluate opportunities in natural gas, power, crude, and refined products, and agriculture, primarily in North America and Europe.</p>
+                <p className="text-md">Spectrum Capitals commodities team seeks to generate alpha through directional and relative value strategies across both physical and financial commodities markets. We evaluate opportunities in natural gas, power, crude, and refined products, and agriculture, primarily in North America and Europe.</p>
               </div>
               <div>
                 <h4>How we do it</h4>
-                <p className="text-md">solidvestglobal.com uses fundamental research, proprietary analytical methodologies, and quantitative analysis to drive our views. We join these techniques with an intense focus on understanding each market we trade, reflected in our ability to generate supply and demand balances for each commodity or product. A key part of this process is our advanced technology platform that allows us to quickly and deeply understand patterns within a market or product, conduct scenario analysis and improve the overall accuracy of our views.</p>
+                <p className="text-md">Spectrum Capitals uses fundamental research, proprietary analytical methodologies, and quantitative analysis to drive our views. We join these techniques with an intense focus on understanding each market we trade, reflected in our ability to generate supply and demand balances for each commodity or product. A key part of this process is our advanced technology platform that allows us to quickly and deeply understand patterns within a market or product, conduct scenario analysis and improve the overall accuracy of our views.</p>
               </div>
             </div>
-            <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+            <div data-aos="fade-up-right">
+              <img src={comassestsfx} alt="" className="w-full rounded-xl" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+            <div data-aos="fade-up-left">
+              <img src={credassetsfx} alt="" className="w-full rounded-xl" />
             </div>
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">Credit</h3>
+            <div data-aos="fade-up-right">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Credit</h3>
               <div>
                 <h4>Who we are</h4>
-                <p className="text-md">solidvestglobal.com's credit team seeks to generate alpha by focusing on the relationships that connect corporate bonds, convertible bonds, bank debt, credit derivatives, credit indices, and equities.</p>
+                <p className="text-md">Spectrum Capitals's credit team seeks to generate alpha by focusing on the relationships that connect corporate bonds, convertible bonds, bank debt, credit derivatives, credit indices, and equities.</p>
               </div>
               <div>
                 <h4>How we do it</h4>
@@ -127,24 +126,24 @@ const Herosection = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">Hedge Strategies</h3>
+            <div data-aos="fade-up-left">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Hedge Strategies</h3>
               <p className="text-md">
                 Also referred to as alternative strategies, these investment strategies use both long and short positions in markets and securities as well as derivatives in an attempt to minimize market beta returns while seeking alpha and risk-adjusted returns. Some of the most common strategies are long and short equity, global macro, relative value, and credit.
               </p>
             </div>
-            <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+            <div data-aos="fade-up-right">
+              <img src={hexassestsfx} alt="" className="w-full rounded-xl" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
+            <div data-aos="fade-up-left">
               <img src={forexassets} alt="" className="w-full rounded-xl" />
             </div>
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">Foreign Exchange</h3>
+            <div data-aos="fade-up-right">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Foreign Exchange</h3>
               <p className="text-md">
-                solidvestglobal.com finance offers a broad array of professional services and access to the global foreign exchange markets for commercial and institutional clients. execution and clearing services in virtually all tradable currency pairs and derivative instruments.
+                Spectrum Capitals finance offers a broad array of professional services and access to the global foreign exchange markets for commercial and institutional clients. execution and clearing services in virtually all tradable currency pairs and derivative instruments.
               </p>
               <div>
                 <h4>What is foreign exchange?</h4>
@@ -153,57 +152,51 @@ const Herosection = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">Crypto asset</h3>
+            <div data-aos="fade-up-left">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Crypto asset</h3>
               <p className="text-md">
-                solidvestglobal.com offers a variety of cryptocurrencies that can be traded in relation to many different currencies. We offer pairings with the following cryptocurrencies: Bitcoin, Litecoin, Ripple, TRON, Ethereum and many others. Study cryptocurrency price charts with solidvestglobal.com
+                Spectrum Capitals offers a variety of cryptocurrencies that can be traded in relation to many different currencies. We offer pairings with the following cryptocurrencies: Bitcoin, Litecoin, Ripple, TRON, Ethereum and many others. Study cryptocurrency price charts with Spectrum Capitals
               </p>
               <p className="text-md">
                 Investing vs. trading cryptocurrency There are two options when trading in the cryptocurrency market. You can buy actual cryptocurrency on exchanges, where you own the underlying asset. This is considered a long-term investment, as you are waiting for the price to rise significantly before selling.
               </p>
             </div>
-            <div>
-              <img src={Fxtimg} alt="" className="w-full rounded-xl" />
+            <div data-aos="fade-up-right">
+              <img src={cryassetsfx} alt="" className="w-full rounded-xl" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
+            <div data-aos="fade-up-left">
               <img src={instragety} alt="" className="w-full rounded-xl" />
             </div>
-            <div>
+            <div data-aos="fade-up-right">
               <div>
-                <h3>ENERGY & SUSTAINABILITY</h3>
+                <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">INVESTED IN SUSTAINABLE GROWTH</h3>
               <p className="text-md">
-                With the global shift toward more sustainable sources of energy, solidvestglobal.com continues to expand coverage to track this critical evolution, providing cutting-edge insights and superior capital markets and advisory expertise.
-              </p>
-              </div>
-              <div>
-                <h3>INVESTED IN SUSTAINABLE GROWTH</h3>
-              <p className="text-md">
-                Sustainability and Energy Transition are areas of intense focus for the investment community, impacting virtually every sector. At solidvestglobal.com, we draw from our in-depth research and thought leadership across the firm as we explore Sustainability and its impact on the business and social landscape. We bring particular expertise in alternative energy, mobility technology, biotechnology, synthetic biology, Internet of Things, edge computing and 5G, and robotics and automation.
+                Sustainability and Energy Transition are areas of intense focus for the investment community, impacting virtually every sector. At Spectrum Capitals, we draw from our in-depth research and thought leadership across the firm as we explore Sustainability and its impact on the business and social landscape. We bring particular expertise in alternative energy, mobility technology, biotechnology, synthetic biology, Internet of Things, edge computing and 5G, and robotics and automation.
               </p>
               </div>
               
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">INSTITUTIONAL MANAGEMENT</h3>
+            <div data-aos="fade-up-left">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">INSTITUTIONAL MANAGEMENT</h3>
               <p>
-               When you select solidvestglobal.com to manage institutional assets, you will discover why we've earned the reputation for solid performance and equally solid relationships. Our stable ownership and strong balance sheet allow us to think long-term, while our dynamic culture inspires long tenures and deep institutional knowledge. And, above all, our high rate of client retention demonstrates that we not only say what we do, we do what we say.
+               When you select Spectrum Capitals to manage institutional assets, you will discover why we've earned the reputation for solid performance and equally solid relationships. Our stable ownership and strong balance sheet allow us to think long-term, while our dynamic culture inspires long tenures and deep institutional knowledge. And, above all, our high rate of client retention demonstrates that we not only say what we do, we do what we say.
 
               </p>
             </div>
-            <div>
+            <div data-aos="fade-up-right">
               <img src={instimanage} alt="" className="w-full rounded-xl" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div>
+            <div data-aos="fade-up-left">
               <img src={privassets} alt="" className="w-full rounded-xl" />
             </div>
-            <div>
-              <h3 className="text-3xl font-[Jost] pb-2">Private Equity</h3>
+            <div data-aos="fade-up-right">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Private Equity</h3>
               <p className="text-md">
                 Private equity funds typically invest in equity capital that is not quoted on a public exchange. Instead, the funds take direct ownership positions in private companies, which potentially may provide above-market returns and control of the investment, at the risk of reduced liquidity and diversification.
               </p>

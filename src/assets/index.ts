@@ -30,3 +30,11 @@ export {default as instimanage} from "./instimangement.jpg";
 export {default as privassets} from "./privasstes.jpg";
 export {default as realassets} from "./realassets.jpg";
 export {default as forexassets} from "./forexasset.jpg";
+export {default as tradone} from "./trad.jpg";
+export {default as tradtwo} from "./trade.jpg";
+export {default as tradthree} from "./tradi.jpg";
+export {default as tradfour} from "./trado.jpg"
+export {default as cryassetsfx} from "./cryassets.jpg";
+export {default as hexassestsfx} from "./hedstra.jpg";
+export {default as comassestsfx} from "./comassestsfx.jpg";
+export {default as credassetsfx} from "./credassests.jpg";

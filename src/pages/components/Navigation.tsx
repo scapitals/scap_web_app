@@ -6,10 +6,21 @@ import { FaAngleDown } from "react-icons/fa6";
 import { MainLogo } from ".";
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const [changebg, setChangebg] = useState(false);
 
-  document
+  const changeBackground = () => {
+    // console.log(window.scrollY)
+    if (window.scrollY >= 80) {
+      setChangebg(true);
+    } else {
+      setChangebg(false);
+    }
+  };
+  window.addEventListener("scroll", changeBackground);
+
+
   return (
-    <nav className="bg-transparent">
+    <nav className={`${changebg ? "bg-[#f1f1f1] dark:bg-[#1f2937] fixed w-full z-50": "bg-transparent"}`}>
       <div className="flex items-center font-medium justify-around">
         <div className="z-20 p-5 md:w-auto w-full flex justify-between">
           <MainLogo />

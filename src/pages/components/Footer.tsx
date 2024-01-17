@@ -1,10 +1,32 @@
 import { FaEnvelope, FaFacebook, FaGithub, FaHome, FaLinkedin, FaPhone } from "react-icons/fa"
 import { Button } from "../ui"
 import { MainLogo } from "."
+import { Link } from "react-router-dom"
 
 const Footer = () => {
 
-  const uselinkItems = ["About Us", "Services", "Packages", "Stocks"]
+  const uselinkItems = [
+    {
+      id: 1,
+      link: "about",
+      text: "About Us"
+    },
+    {
+      id: 2, 
+      link: "/service",
+      text: "Services",
+    },
+    {
+      id: 3,
+      link: "/forex",
+      text: "Forex"
+    },
+    {
+      id: 4,
+      link: "/stock",
+      text: "Stocks"
+    }
+  ]
 
   return (
     <>
@@ -13,17 +35,21 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6 text-white justify-start items-start">
         <div>
-          <div>
+          <div className="flex justify-start items-start">
             <MainLogo />
           </div>
           
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aliquid doloribus illum praesentium veniam id obcaecati. Expedita in voluptatum eaque. Totam ut quod facilis unde tempora? Ex quas, odit fuga culpa quos iusto eaque quis minima eius ipsam molestias? Minima!</p>
+          <p>Spectrum Capitals is committed to security ensures that your investments are safeguarded, allowing you to focus on growing your portfolio with peace of mind.</p>
         </div>
         <div>
           <h3>Useful Links</h3>
           <ul>
-            {uselinkItems.map((item, index) => (
-              <li key={index}>{item}</li>
+            {uselinkItems.map((item) => (
+              <li key={item.id}>
+                <Link to={item.link}>
+                 {item.text} 
+                </Link>
+              </li>
             ))}
           </ul>
         </div>

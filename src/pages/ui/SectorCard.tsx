@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 interface sectorTypes{
   title: String,
@@ -7,7 +8,8 @@ interface sectorTypes{
 
 const SectorCard = ({title, text, sub}: sectorTypes) => {
   return (
-    <div className="rounded border border-primary h-64 flex flex-col justify-between items-center shadow bg-[#f1f1f1] dark:bg-[#1f2937]" data-aos="zoom-in" >
+    <Link to="/service">
+     <div className="rounded border border-primary h-64 hover:shadow-2xl flex flex-col justify-between items-center shadow bg-[#f1f1f1] dark:bg-[#1f2937] cursor-pointer" data-aos="zoom-in" >
         <div className="w-full py-4 bg-primary">
           <h2 className="text-center">{title}</h2>
         </div>
@@ -18,7 +20,9 @@ const SectorCard = ({title, text, sub}: sectorTypes) => {
          <p className="text-xl">{sub}</p> 
         </div>
         
-    </div>
+    </div> 
+    </Link>
+    
   )
 }
 

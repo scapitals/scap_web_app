@@ -37,7 +37,7 @@ const Herosection = () => {
       <div className="h-[50vh] bg-abtimg bg-center bg-cover">
         <Navigation />
         <div className="container">
-          <div></div>
+          <p className='text-2xl font-[600]'>Contact</p>
         </div>
       </div>
 

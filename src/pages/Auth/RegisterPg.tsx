@@ -4,7 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Asimg from "../../assets/undraw_login.svg";
+import Asimg from "../../assets/Sign up-bro.svg";
 import SpinnerLoad from "../components/SpinnerLoad";
 
 const RegisterPg = () => {
@@ -85,7 +85,7 @@ const RegisterPg = () => {
             <p className="">Home</p>
           </div>
         </Link>
-        <img src={Asimg} alt="" className="w-full" />
+        <img src={Asimg} alt="" className="w-[80%] mx-auto" />
       </div>
       <div>
         <Link to="/" className=" md:hidden block">

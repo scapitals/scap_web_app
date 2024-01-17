@@ -1,4 +1,4 @@
-import { assestmanage, btcpng, clstock, corabt, dedabt, dlrpng, egabt, ethpng, flstock, forabt, gpstock, indabt, institutemanage, instock, ltcpng, splanone, splanthree, splantwo, steabt, wealthmanage } from "../assets"
+import { assestmanage, btcpng, clstock, corabt, dedabt, dlrpng, egabt, ethpng, flstock, forabt, gpstock, indabt, institutemanage, instock, ltcpng, splanone, splanthree, splantwo, steabt, tradfour, tradone, tradthree, tradtwo, wealthmanage } from "../assets"
 import afthero from "../assets/about-hero.jpg"
 export const stockData = [
     {
@@ -108,25 +108,25 @@ export const solidProItems = [
         id: 1,
         title: "$0 ONLINE EQUITY COMMISSIONS",
         text: "No one is lower than Schwab among E*TRADE, Fidelity, or Vanguard",
-        img: afthero
+        img: tradone
     },
     {
         id: 2,
         title: "INTUITIVE PLATFORMS",
         text: "Trade stocks using our web, mobile, or advanced platforms.",
-        img: afthero
+        img: tradtwo
     },
     {
         id: 3,
         title: "TRADING SPECIALISTS",
         text: "Get real-time trade analysis and focused support from investing professionals.",
-        img: afthero
+        img: tradthree
     },
     {
         id: 4,
         title: "PREMIUM RESEARCH",
         text: "Sharpen your instincts with actionable stock trading research and insights from Schwab and third parties.",
-        img: afthero
+        img: tradfour
     }
 ]
 
