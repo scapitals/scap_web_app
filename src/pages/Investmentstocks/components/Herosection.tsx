@@ -1,4 +1,4 @@
-import AbtHero from "../../../assets/hhero.jpg";
+import AbtHero from "../../../assets/dedabt.png";
 import { TopstData, solidProItems, tstockData } from "../../../utils/data";
 import { SolidItemCard, SusCard, TopstCard } from "../../ui";
 import Navigation from "../../components/Navigation";

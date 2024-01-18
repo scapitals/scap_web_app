@@ -1,9 +1,9 @@
 import AbuImg from "../../../assets/about-hero.jpg";
-import nwse from "../../../assets/team1.jpg";
+import nwse from "../../../assets/abteam1.jpg";
 import { SusCard } from "../../ui";
 import { sustainAbtDataOne, sustainAbtDataTwo } from "../../../utils/data";
 import abteamo from "../../../assets/abteam1.jpg"
-import abteamt from "../../../assets/abteam2.jpg"
+import abteamt from "../../../assets/credassests.jpg"
 import Navigation from "../../components/Navigation";
 
 const Herosection = () => {

@@ -1,6 +1,6 @@
 import {createBrowserRouter, Link, Route, RouterProvider, Routes} from "react-router-dom";
 import {ToastContainer} from "react-toastify"
-import {HomePg, AboutPg, ContactPg, LoginPg, RegisterPg, FgtPwd, PlanServicePg, InvestmentstockPg, InvestForexPg} from "./pages";
+import {HomePg, AboutPg, ContactPg, LoginPg, RegisterPg, FgtPwd, PlanServicePg, InvestmentstockPg, InvestForexPg, InvestBlockchain} from "./pages";
 import {FaSun, FaMoon, FaWhatsapp} from "react-icons/fa"
 import { useTheme } from "next-themes";
 import "react-toastify/dist/ReactToastify.css";
@@ -60,6 +60,7 @@ useEffect(() =>{
         <Route path="/service" element={<PlanServicePg />} />
         <Route path="/stocks" element={<InvestmentstockPg />} />
         <Route path="/forex" element={<InvestForexPg />} />
+        <Route path="/blockchain" element={<InvestBlockchain />} />
         <Route path="/user/*" element={<UserMain />} />
         <Route path="/login" element={<LoginPg />} />
         <Route path="/contact" element={<ContactPg />} />

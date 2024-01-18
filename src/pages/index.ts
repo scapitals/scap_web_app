@@ -8,3 +8,4 @@ export {default as ContactPg} from "./ContactPg/ContactPg";
 export {default as PlanServicePg} from "./PlanServicePg/PlanServicePg";
 export {default as InvestmentstockPg} from "./Investmentstocks/Investmentstocks"; 
 export {default as InvestForexPg} from "./InvestForex/InvestForex";
+export {default as InvestBlockchain} from "./InvestBlockchain/InvestBlockchain";

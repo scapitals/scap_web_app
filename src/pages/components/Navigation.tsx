@@ -59,7 +59,7 @@ const Navigation = () => {
                     mt-1 bg-[#f1f1f1] dark:bg-[#1f2937] rotate-45"
                   ></div>
                 </div>
-                <div className="bg-[#f1f1f1] dark:bg-[#1f2937] p-5 w-48 flex flex-col gap-10">
+                <div className="bg-[#f1f1f1] dark:bg-[#1f2937] p-3 w-48 flex flex-col gap-4 rounded-lg">
                   <li className="text-lg text-black dark:text-white  my-1">
                     <Link to="/stocks" className="hover:text-primary">
                       Stock
@@ -68,6 +68,11 @@ const Navigation = () => {
                   <li className="text-lg text-black dark:text-white  my-1">
                     <Link to="/forex" className="hover:text-primary">
                       Forex
+                    </Link>
+                  </li>
+                  <li className="text-lg text-black dark:text-white  my-1">
+                    <Link to="/blockchain" className="hover:text-primary">
+                      Blockchain
                     </Link>
                   </li>
                 </div>
@@ -116,6 +121,11 @@ const Navigation = () => {
           <li>
             <Link to="/forex" className="py-1 px-3 inline-block">
                Forex
+            </Link>
+          </li>
+          <li>
+            <Link to="/forex" className="py-1 px-3 inline-block">
+              Blockchain
             </Link>
           </li>
           <li>

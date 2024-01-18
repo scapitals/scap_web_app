@@ -1,11 +1,11 @@
-import { assestmanage, btcpng, clstock, corabt, dedabt, dlrpng, egabt, ethpng, flstock, forabt, gpstock, indabt, institutemanage, instock, ltcpng, splanone, splanthree, splantwo, steabt, tradfour, tradone, tradthree, tradtwo, wealthmanage } from "../assets"
+import { btcpng, clstock, corabt, dedabt, dlrpng, egabt, ethpng, flstock, forabt, gpstock, indabt, institutemanage, instock, ltcpng,  splanthree,  steabt, tradfour, tradone, tradthree, tradtwo, wealthmanage } from "../assets"
 import afthero from "../assets/about-hero.jpg"
 export const stockData = [
     {
         id: 1,
         title: "ASSET MANAGEMENT",
         text: "We create customized, integrated investment solutions to meet the unique needs of insurers and pension plans.",
-        img: assestmanage
+        img: wealthmanage
     },
     {
         id: 2,
@@ -197,12 +197,12 @@ export const PserveData = [
     {
         id: 1,
         text: "BUSINESS SERVICES",
-        img: splanone
+        img: splanthree
     },
     {
         id: 2,
         text: "PRIVATE WEALTH MANAGEMENT",
-        img: splantwo
+        img: splanthree
     },
     {
         id: 3,
