@@ -2,8 +2,22 @@ import { FaEnvelope, FaFacebook, FaGithub, FaHome, FaLinkedin, FaPhone } from "r
 import { Button } from "../ui"
 import { MainLogo } from "."
 import { Link } from "react-router-dom"
+import { useState } from "react"
+import { toast } from "react-toastify"
+import axios from "axios"
 
 const Footer = () => {
+  const [email, setEmail] = useState("")
+
+  const handleEmailSub = async() => {
+    try{
+      await axios.post("http://localhost:3030/api/user/email-subscribe", {email});
+      setEmail('');
+      toast.success("Email Address Received", {position: "bottom-left"})
+    }catch(err: any){
+      toast.error(err, {position: "bottom-left"})
+    }
+  }
 
   const uselinkItems = [
     {
@@ -81,9 +95,12 @@ const Footer = () => {
         </div>
         <div>
           <h4>Subscribe Our Newletter to get updates</h4>
-          <div>
-            <input type="email" placeholder="Email Address" name="" id="" className="border border-primary p-2 rounded-xl"/>
-            <Button btntext="Subscribe" />
+          <div className="flex flex-col gap-2">
+            <input type="email" value={email} onChange={(e:any) => setEmail(e.target.value)} placeholder="Email Address" name="" id="" className="border border-primary p-2 rounded-xl text-black"/>
+            <div onClick={handleEmailSub}>
+             <Button btntext="Subscribe" /> 
+            </div>
+            
           </div>
         </div>
       </div>
@@ -105,4 +122,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

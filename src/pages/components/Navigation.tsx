@@ -72,7 +72,7 @@ const Navigation = () => {
                   </li>
                   <li className="text-lg text-black dark:text-white  my-1">
                     <Link to="/blockchain" className="hover:text-primary">
-                      Blockchain
+                      Blockchain Technology
                     </Link>
                   </li>
                 </div>

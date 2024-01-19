@@ -1,8 +1,7 @@
-import AbtHero from "../../../assets/dedabt.png";
 import { TopstData, solidProItems, tstockData } from "../../../utils/data";
 import { SolidItemCard, SusCard, TopstCard } from "../../ui";
 import Navigation from "../../components/Navigation";
-import { stocktwo } from "../../../assets";
+import { credassetsfx, stocktwo } from "../../../assets";
 
 const Herosection = () => {
     const factItems = ["Stop and conditional orders may help protect your portfolio", "The price-to-earning (P/E) ratio can help you identify value stocks", "Compare earnings-per-share (EPS) between similar companies.", "Market capitalization (market cap) is the dollar value of a company", "Stock performance can fluctuate depending on market conditions"]
@@ -57,9 +56,9 @@ const Herosection = () => {
                 <SusCard key={item.id} title={item.title} text={item.text} img={item.img}/>
             ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
-                <img src={AbtHero} alt="image" className="w-full rounded-xl " />
+                <img src={credassetsfx} alt="image" className="w-full rounded-xl " />
             </div>
             <div data-aos="fade-up-right">
                 <h2 className="text-lg md:text-3xl font-[Jost] pb-2">Fast Facts</h2>

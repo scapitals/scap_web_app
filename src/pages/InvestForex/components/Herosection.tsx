@@ -58,8 +58,38 @@ const Herosection = () => {
             </p>
           </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
+            
+            <div data-aos="fade-up-right">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Foreign Exchange</h3>
+              <p className="text-md">
+                Spectrum Capitals finance offers a broad array of professional services and access to the global foreign exchange markets for commercial and institutional clients. execution and clearing services in virtually all tradable currency pairs and derivative instruments.
+              </p>
+              <div>
+                <h4>What is foreign exchange?</h4>
+                <p className="text-md">Forex, or foreign exchange, can be explained as a network of buyers and sellers, who transfer currency between each other at an agreed price. It is the means by which individuals, companies and central banks convert one currency into another - if you have ever travelled abroad, then it is likely you have made a forex transaction.</p>
+                </div>
+            </div>
+            <div data-aos="fade-up-left">
+              <img src={forexassets} alt="" className="w-full rounded-xl" />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
+            
+            <div data-aos="fade-up-right">
+              <img src={cryassetsfx} alt="" className="w-full rounded-xl" />
+            </div>
+            <div data-aos="fade-up-left">
+              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Crypto asset</h3>
+              <p className="text-md">
+                Spectrum Capitals offers a variety of cryptocurrencies that can be traded in relation to many different currencies. We offer pairings with the following cryptocurrencies: Bitcoin, Litecoin, Ripple, TRON, Ethereum and many others. Study cryptocurrency price charts with Spectrum Capitals
+              </p>
+              <p className="text-md">
+                Investing vs. trading cryptocurrency There are two options when trading in the cryptocurrency market. You can buy actual cryptocurrency on exchanges, where you own the underlying asset. This is considered a long-term investment, as you are waiting for the price to rise significantly before selling.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <h3 className="text-3xl font-[Jost] pb-2">Real Assets</h3>
               <p className="text-md">
@@ -82,7 +112,7 @@ const Herosection = () => {
               <img src={realassets} alt="" className="w-full rounded-xl" />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <img src={instragety} alt="" className="w-full rounded-xl" />
             </div>
@@ -93,7 +123,7 @@ const Herosection = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Commodities</h3>
               <div>
@@ -109,7 +139,7 @@ const Herosection = () => {
               <img src={comassestsfx} alt="" className="w-full rounded-xl" />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <img src={credassetsfx} alt="" className="w-full rounded-xl" />
             </div>
@@ -125,7 +155,7 @@ const Herosection = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Hedge Strategies</h3>
               <p className="text-md">
@@ -136,36 +166,7 @@ const Herosection = () => {
               <img src={hexassestsfx} alt="" className="w-full rounded-xl" />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div data-aos="fade-up-left">
-              <img src={forexassets} alt="" className="w-full rounded-xl" />
-            </div>
-            <div data-aos="fade-up-right">
-              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Foreign Exchange</h3>
-              <p className="text-md">
-                Spectrum Capitals finance offers a broad array of professional services and access to the global foreign exchange markets for commercial and institutional clients. execution and clearing services in virtually all tradable currency pairs and derivative instruments.
-              </p>
-              <div>
-                <h4>What is foreign exchange?</h4>
-                <p className="text-md">Forex, or foreign exchange, can be explained as a network of buyers and sellers, who transfer currency between each other at an agreed price. It is the means by which individuals, companies and central banks convert one currency into another - if you have ever travelled abroad, then it is likely you have made a forex transaction.</p>
-                </div>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
-            <div data-aos="fade-up-left">
-              <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">Crypto asset</h3>
-              <p className="text-md">
-                Spectrum Capitals offers a variety of cryptocurrencies that can be traded in relation to many different currencies. We offer pairings with the following cryptocurrencies: Bitcoin, Litecoin, Ripple, TRON, Ethereum and many others. Study cryptocurrency price charts with Spectrum Capitals
-              </p>
-              <p className="text-md">
-                Investing vs. trading cryptocurrency There are two options when trading in the cryptocurrency market. You can buy actual cryptocurrency on exchanges, where you own the underlying asset. This is considered a long-term investment, as you are waiting for the price to rise significantly before selling.
-              </p>
-            </div>
-            <div data-aos="fade-up-right">
-              <img src={cryassetsfx} alt="" className="w-full rounded-xl" />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <img src={instragety} alt="" className="w-full rounded-xl" />
             </div>
@@ -179,7 +180,7 @@ const Herosection = () => {
               
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <h3 className="text-lg md:text-3xl font-[Jost] pb-2'">INSTITUTIONAL MANAGEMENT</h3>
               <p>
@@ -191,7 +192,7 @@ const Herosection = () => {
               <img src={instimanage} alt="" className="w-full rounded-xl" />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-14 justify-center items-center overflow-hidden">
             <div data-aos="fade-up-left">
               <img src={privassets} alt="" className="w-full rounded-xl" />
             </div>

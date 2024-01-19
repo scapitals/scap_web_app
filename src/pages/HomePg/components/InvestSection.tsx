@@ -5,11 +5,11 @@ const InvestSection = () => {
   return (
     <div>
       <div className="container py-16">
-        <div className="py-10">
+        <div className="py-10 flex flex-col gap-6">
           <h2 className="text-5xl font-['Jost'] text-center">
-            Investment Plan
+            INVESTMENT PLAN
           </h2>
-          <p className="text-center">Our Trading Investment Plan</p>
+          <p className="text-center text-xl">Our Trading Investment Plan</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center items-center">
